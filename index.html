@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>XUR | Estudio Diagonal 2026</title>
+    <meta name="description" content="Estudio Diagonal XUR - Diseñamos experiencias inmersivas que integran arte, tecnología y luz.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas de Partículas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Botón oculto vista mobile (tecla M) -->
+    <button id="mobile-preview-btn" title="Vista Mobile [M]" aria-label="Toggle mobile preview">📱</button>
+
+    <!-- Navbar Glass -->
+    <nav class="navbar">
+        <a href="#hero" class="nav-logo">
+            <img src="assets/logo-xur.svg" alt="XUR" class="nav-logo-img">
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="#quienes-somos" data-i18n="nav-about">Quiénes somos</a>
+            <a href="#que-hacemos" data-i18n="nav-services">Servicios</a>
+            <a href="#servicios-detail" data-i18n="nav-portfolio">Portfolio</a>
+            <a href="#catalogo" data-i18n="catalog-title">Catálogo</a>
+            <a href="#presupuesto" data-i18n="nav-budget">CONTACTANOS</a>
+            <a href="#contacto" data-i18n="nav-contact">REDES</a>
+            <button id="lang-btn" class="lang-btn">EN</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-hud top-left">
+            <span class="hud-label">GPS: -34.6111</span>
+            <span class="hud-label">Lo: -58.3795</span>
+        </div>
+        <div class="hero-hud top-right">
+            <span class="hud-label">desde 2025</span>
+        </div>
+        <div class="hero-center">
+            <span class="hero-subtitle" data-i18n="hero-subtitle">DIGITAL ART STUDIO</span>
+            <img src="assets/imagotipo-xur-blaco.png" alt="XUR Logo" class="hero-logo">
+            <p class="hero-tagline" data-i18n="hero-tagline">EXPLORING BEYOND DIMENSIONS</p>
+            <a href="#quienes-somos" class="cta-btn" data-i18n="hero-cta">VER PROYECTOS »</a>
+        </div>
+        <div class="hero-hud bottom-left">
+            <span class="hud-label">desde 2025</span>
+        </div>
+        <div class="hero-hud bottom-right">
+            <span class="hud-label">SYST. STATUS: ACTIVE</span>
+            <span class="hud-label">PROJECT: IMMERSIVE_SCAPES</span>
+        </div>
+    </header>
+
+    <!-- 01. QUIENES SOMOS -->
+    <section id="quienes-somos" class="reveal">
+        <div class="section-header">
+            <span class="section-num">01.</span>
+            <h2 data-i18n="team-title">Quiénes somos</h2>
+        </div>
+        <div class="team-hero">
+            <video src="assets/video/ARMADO DIAGONAL XUR_LA RURAL_2-min.mp4" autoplay loop muted playsinline class="team-photo"></video>
+            <div class="team-intro">
+                <p class="section-intro" data-i18n="team-intro">Somos un colectivo de artistas, diseñadores, programadores, animadores y técnicos con varios años de experiencia en publicidad, eventos, shows internacionales, animación y diseño de objetos.</p>
+            </div>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="card-glow"></div>
+                <h3>Facundo Marrazzo</h3>
+                <span class="role">effe.cinco</span>
+                <p data-i18n="team-member-1">Artista visual / VJ especializado en arte generativo y experiencias interactivas. Experiencia en sistemas de interacción, tracking corporal, procesamiento espacial y visuales generativos aplicados a escena.</p>
+            </div>
+            <div class="team-card">
+                <div class="card-glow"></div>
+                <h3>Julieta Ver</h3>
+                <span class="role">Julie Vtt</span>
+                <p data-i18n="team-member-2">Diseñadora industrial y productora audiovisual con foco en realización, animación y producción técnica. Amplia experiencia en gestión y coordinación de proyectos de gran escala.</p>
+            </div>
+            <div class="team-card">
+                <div class="card-glow"></div>
+                <h3>Manuel Benavidez</h3>
+                <span class="role">Manuu_raw</span>
+                <p data-i18n="team-member-3">Artista multimedia y técnico audiovisual especializado en la integración y sincronización de sistemas de luz, video y sonido.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. QUÉ HACEMOS -->
+    <section id="que-hacemos" class="reveal">
+        <div class="section-header">
+            <span class="section-num">02.</span>
+            <h2 data-i18n="what-title">Qué hacemos</h2>
+        </div>
+        <p class="large-statement" data-i18n="what-statement">Diseñamos y desarrollamos experiencias inmersivas que integran arte, tecnología y luz, transformando la percepción del espacio y generando interacción significativa con el público.</p>
+        <div class="capabilities-list">
+            <div class="cap-item">
+                <h4 data-i18n="cap-1-title">Diseño de espacios y objetos interactivos</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-2-title">Contenido visual y dirección de arte</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-3-title">Tecnología de sensores propia</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-4-title">Software con licencias oficiales</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-5-title">Equipo interdisciplinario</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-6-title">Equipo técnico para eventos</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. SERVICIOS (BENTO GRID) -->
+    <section id="servicios-detail" class="reveal">
+        <div class="section-header">
+            <span class="section-num">03.</span>
+            <h2 data-i18n="services-title">Servicios</h2>
+        </div>
+        
+        <div class="services-bento">
+            <!-- Item 1: Experiencias Interactivas (Large) -->
+            <div class="bento-card bento-large interactive-bg" data-project="interactiva">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-1-tag">PROYECTOS DE MARCA</span>
+                    <h3 data-i18n="bento-1-title">INSTALACIONES<br>INTERACTIVAS</h3>
+                    <p data-i18n="bento-1-desc">Tótems, pisos sensibles y gamificación para activaciones de alto impacto.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="assets/video/sevicios/Instalaciones Interactivas/EVENTO DIAGONAL XUR_LA RURAL-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Item 2: Live Shows (Medium) -->
+            <div class="bento-card live-bg" data-project="live">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-2-tag">STAGE & PERFORMANCE</span>
+                    <h3 data-i18n="bento-2-title">LIVE SHOWS & LÁSER</h3>
+                    <p data-i18n="bento-2-desc">VJ Sets, shows de láser sincronizado y estructuras cinéticas.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="assets/video/sevicios/wow momet sincro laser AV/07_SL_03-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Item 3: Content Design (Medium) -->
+            <div class="bento-card content-bg" data-project="mapping">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-3-tag">VISUAL ARCHITECTURE</span>
+                    <h3 data-i18n="bento-3-title">CONTENT & MAPPING</h3>
+                    <p data-i18n="bento-3-desc">Dirección de arte y 3D Mapping sobre superficies complejas.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="assets/video/sevicios/Mapping/04_M_01-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Item 4: Gamificación (Wide) -->
+            <div class="bento-card bento-wide games-bg" data-project="games">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-4-tag">PLAY & CONNECT</span>
+                    <h3 data-i18n="bento-4-title">GAMIFICACIÓN</h3>
+                    <p data-i18n="bento-4-desc">Juegos interactivos y dinámicas de competencia para marcas.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="assets/video/sevicios/Juegos interactivos  gamificación/06_JI_02-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Moodboard moved to end of document -->
+
+    </section>
+
+    <!-- 04. CATALOGO -->
+    <section id="catalogo" class="catalog-section reveal">
+        <div class="section-header">
+            <span class="section-num">04.</span>
+            <h2 data-i18n="catalog-title">Catálogo de Experiencias</h2>
+        </div>
+        <p class="section-intro" data-i18n="catalog-subtitle">SELECCIONÁ TU PRÓXIMA ACTIVACIÓN</p>
+        
+        <div class="catalog-controls">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">TODOS</button>
+                <button class="filter-btn" data-filter="01">INSTALACIONES</button>
+                <button class="filter-btn" data-filter="03">PANTALLAS</button>
+                <button class="filter-btn" data-filter="04">MAPPING</button>
+                <button class="filter-btn" data-filter="mundial">MUNDIAL</button>
+            </div>
+            
+            <div class="controls-right" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <div class="duration-control">
+                    <label for="catalog-sort-select">ORDEN:</label>
+                    <select id="catalog-sort-select" class="days-select">
+                        <option value="default">POR DEFECTO</option>
+                        <option value="popular">MÁS SOLICITADAS</option>
+                        <option value="price-asc">PRECIO: DE MENOR A MAYOR</option>
+                    </select>
+                </div>
+                <div class="duration-control">
+                    <label for="catalog-days-select">DURACIÓN:</label>
+                    <select id="catalog-days-select" class="days-select">
+                        <option value="1">1 DÍA</option>
+                        <option value="2">2 DÍAS</option>
+                        <option value="3">3 DÍAS</option>
+                        <option value="4">4 DÍAS</option>
+                        <option value="5">5 DÍAS</option>
+                        <option value="99">+5 DÍAS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog-disclaimer">
+            <p>* Todas las experiencias incluyen Armado, Evento y Desarme. El ajuste de branding de marca se puede cotizar como un extra.</p>
+        </div>
+        
+        <div class="catalog-grid" id="catalog-render-grid">
+            <!-- Poblamiento dinámico desde app.js -->
+        </div>
+    </section>
+
+    <!-- 05. PRESUPUESTO -->
+    <section id="presupuesto" class="reveal">
+        <div class="section-header">
+            <span class="section-num">05.</span>
+            <h2 data-i18n="budget-title">Contactanos</h2>
+        </div>
+        
+        <p class="budget-intro" data-i18n="budget-intro">Contanos tu idea</p>
+
+        <div class="budget-wizard" id="main-wizard" style="margin-top: 2rem;">
+            <div class="wizard-progress">
+                <span class="step-indicator" data-i18n="wiz-step-text">STEP <span id="current-step">01</span> / 05</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="wiz-progress"></div>
+                </div>
+            </div>
+
+            <!-- STEP 1: Escala -->
+            <div class="wizard-step active" data-step="1">
+                <h3 data-i18n="wiz-step-1-title">ESCALA DEL PROYECTO</h3>
+                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <button class="option-card" data-value="Club / Private">
+                        <span class="opt-icon">🎵</span>
+                        <strong data-i18n="wiz-opt-1-1">Club / Private</strong>
+                        <span data-i18n="wiz-opt-1-1-desc">Espacios íntimos o eventos privados.</span>
+                    </button>
+                    <button class="option-card" data-value="Corporativo">
+                        <span class="opt-icon">🏢</span>
+                        <strong data-i18n="wiz-opt-1-2">Corporativo</strong>
+                        <span data-i18n="wiz-opt-1-2-desc">Lanzamientos de marca, ferias o stands.</span>
+                    </button>
+                    <button class="option-card" data-value="Festival / Estadio">
+                        <span class="opt-icon">🎪</span>
+                        <strong data-i18n="wiz-opt-1-3">Festival / Estadio</strong>
+                        <span data-i18n="wiz-opt-1-3-desc">Grandes audiencias y escenarios masivos.</span>
+                    </button>
+                    <button class="option-card" data-value="Permanente">
+                        <span class="opt-icon">🏛️</span>
+                        <strong data-i18n="wiz-opt-1-4">Permanente</strong>
+                        <span data-i18n="wiz-opt-1-4-desc">Instalaciones fijas en museos o locales.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: Servicio -->
+            <div class="wizard-step" data-step="2">
+                <h3 data-i18n="wiz-step-2-title">TIPO DE SERVICIO</h3>
+                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <button class="option-card" data-value="Instalación Interactiva">
+                        <span class="opt-icon">🕳️</span>
+                        <strong data-i18n="wiz-opt-2-1">Instalación Interactiva</strong>
+                        <span data-i18n="wiz-opt-2-1-desc">Piso, pared o estructura reactiva.</span>
+                    </button>
+                    <button class="option-card" data-value="Laser / Luz">
+                        <span class="opt-icon">✨</span>
+                        <strong data-i18n="wiz-opt-2-2">Diseño Lumínico / Laser</strong>
+                        <span data-i18n="wiz-opt-2-2-desc">Cortinas de luz, columnas, efectos.</span>
+                    </button>
+                    <button class="option-card" data-value="Touch / Tótem">
+                        <span class="opt-icon">🖱️</span>
+                        <strong data-i18n="wiz-opt-2-3">Pantalla Táctil / Tótem</strong>
+                        <span data-i18n="wiz-opt-2-3-desc">Interfaz digital interactiva.</span>
+                    </button>
+                    <button class="option-card" data-value="Gamificación">
+                        <span class="opt-icon">🎮</span>
+                        <strong data-i18n="wiz-opt-2-4">Juego / Gamificación</strong>
+                        <span data-i18n="wiz-opt-2-4-desc">Competencia, ranking, sorteos.</span>
+                    </button>
+                    <button class="option-card" data-value="Sincro Laser">
+                        <span class="opt-icon">🌟</span>
+                        <strong data-i18n="wiz-opt-2-5">Sincro Láser</strong>
+                        <span data-i18n="wiz-opt-2-5-desc">Show de video + láser sincronizado.</span>
+                    </button>
+                    <button class="option-card" data-value="Combo">
+                        <span class="opt-icon">📦</span>
+                        <strong data-i18n="wiz-opt-2-6">Combo / Multiservicios</strong>
+                        <span data-i18n="wiz-opt-2-6-desc">Dos o más servicios combinados.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Presupuesto Estimado -->
+            <div class="wizard-step" data-step="3">
+                <h3 data-i18n="wiz-step-3b-title">PRESUPUESTO ESTIMADO (USD)</h3>
+                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <button class="option-card" data-value="menos de 2000">
+                        <strong>Menos de 2.000</strong>
+                    </button>
+                    <button class="option-card" data-value="2 a 5000">
+                        <strong>2.000 a 5.000</strong>
+                    </button>
+                    <button class="option-card" data-value="5 a 10000">
+                        <strong>5.000 a 10.000</strong>
+                    </button>
+                    <button class="option-card" data-value="10k a 20k">
+                        <strong>10.000 a 20.000</strong>
+                    </button>
+                    <button class="option-card" data-value="20 a 30">
+                        <strong>20.000 a 30.000</strong>
+                    </button>
+                    <button class="option-card" data-value="mas de 30">
+                        <strong>Más de 30.000</strong>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4: Detalles -->
+            <div class="wizard-step" data-step="4">
+                <h3 data-i18n="wiz-step-3-title">DETALLES DEL EVENTO</h3>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label data-i18n="f-date">Fecha estimada</label>
+                        <input type="date" id="budget-date" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-dur">Duración (días)</label>
+                        <select id="budget-duration" style="background: rgba(12,12,30,0.9); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                            <option value="1 día" data-i18n="opt-1d">1 día</option>
+                            <option value="2-3 días" data-i18n="opt-23d">2-3 días</option>
+                            <option value="1 semana" data-i18n="opt-1w">1 semana</option>
+                            <option value="Permanente" data-i18n="opt-perm">Permanente</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-loc">Ubicación</label>
+                        <input type="text" id="budget-location" placeholder="Ciudad o venue" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-aud">Audiencia estimada</label>
+                        <select id="budget-audience" style="background: rgba(12,12,30,0.9); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                            <option data-i18n="aud-1">Hasta 50 personas</option>
+                            <option data-i18n="aud-2">50-200 personas</option>
+                            <option data-i18n="aud-3">200-1000 personas</option>
+                            <option data-i18n="aud-4">+1000 personas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 5: Contacto -->
+            <div class="wizard-step" data-step="5">
+                <h3 data-i18n="wiz-step-4-title">DATOS DE CONTACTO</h3>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label data-i18n="f-name">Nombre / Empresa</label>
+                        <input type="text" id="budget-name" placeholder="" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-email">Email</label>
+                        <input type="email" id="budget-email" placeholder="tu@email.com" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field full" style="grid-column: 1 / -1; margin-top: 1rem;">
+                        <label data-i18n="f-notes">Notas adicionales</label>
+                        <textarea id="budget-notes" rows="3" placeholder="" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%; resize: none;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen final -->
+            <div class="wizard-step" data-step="6">
+                <h3 data-i18n="wiz-step-5-title">✔ SOLICITUD ENVIADA</h3>
+                <div id="budget-summary" style="margin-top: 1rem;"></div>
+            </div>
+
+            <div class="wizard-nav" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button class="wiz-btn wiz-back" id="wiz-back" style="display:none; flex: 1; padding: 1rem; background: transparent; border: 1px solid var(--border); color: white; cursor: pointer;" data-i18n="wiz-back">← ATRÁS</button>
+                <button class="wiz-btn wiz-next" id="wiz-next" style="flex: 1; padding: 1rem; background: var(--accent); border: none; color: black; cursor: pointer; font-weight: 700;" data-i18n="wiz-next">SIGUIENTE →</button>
+            </div>
+            <p class="budget-disclaimer" style="font-size: 0.7rem; color: var(--text-dim); margin-top: 1.5rem; text-align: center;" data-i18n="wiz-disclaimer">* El resultado es una estimación técnica basada en la complejidad de hardware y software.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="reveal">
+        <div class="section-header">
+            <span class="section-num">05.</span>
+            <h2 data-i18n="contact-title">Redes</h2>
+        </div>
+        <div class="contact-grid-enhanced">
+            <div class="contact-info-blocks">
+                <a href="mailto:hola.xur@gmail.com" class="contact-method-card">
+                    <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></div>
+                    <div class="method-detail">
+                        <span class="method-label">Email</span>
+                        <span class="method-value">hola.xur@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/5491133903141" target="_blank" class="contact-method-card">
+                    <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                    <div class="method-detail">
+                        <span class="method-label">WhatsApp</span>
+                        <span class="method-value">+54 9 11 3390 3141</span>
+                    </div>
+                </a>
+                <div class="contact-method-card no-hover">
+                    <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <div class="method-detail">
+                        <span class="method-label">Ubicación</span>
+                        <span class="method-value">Buenos Aires, Argentina</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-row">
+                <a href="https://www.instagram.com/diagonalxur/" target="_blank" title="Instagram" class="social-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://vimeo.com/diagonalxur" target="_blank" title="Vimeo" class="social-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.38C2 19.83 4.17 22 7.81 22h8.38c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2zM15.26 12l-4.43 2.56c-.33.19-.75-.05-.75-.44V8.88c0-.39.42-.63.75-.44L15.26 11c.33.19.33.69 0 .88z"/></svg>
+                    <span>Vimeo</span>
+                </a>
+                <a href="https://www.behance.net/diagonal-xur" target="_blank" title="Behance" class="social-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 12H3"/><path d="M3 6h4.5a2.5 2.5 0 0 1 0 5H3V6z"/><path d="M3 13h5a2.5 2.5 0 0 1 0 5H3v-5z"/><path d="M14 18c3.31 0 6-2.69 6-6s-2.69-6-6-6"/><path d="M14 12h6"/></svg>
+                    <span>Behance</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOODBOARD EXPLORER (FULLSCREEN SLIDER) -->
+    <div id="moodboard-explorer" class="moodboard-explorer">
+        <button id="close-moodboard" class="close-moodboard">CERRAR ✕</button>
+        <div class="moodboard-header">
+            <h3 id="moodboard-title">PROYECTO SELECCIONADO</h3>
+        </div>
+        
+        <div class="moodboard-slider-container">
+            <button id="moodboard-prev" class="slider-btn prev-btn">←</button>
+            
+            <div class="moodboard-slider" id="moodboard-slider">
+                <!-- Se poblará dinámicamente con videos -->
+            </div>
+            
+            <button id="moodboard-next" class="slider-btn next-btn">→</button>
+        </div>
+
+        <div class="slider-pagination" id="slider-pagination">
+            <!-- Indicadores de punto -->
+        </div>
+    </div>
+
+    <footer>
+        <img src="assets/logo-xur.svg" alt="XUR" class="footer-logo">
+        <span>© 2026 Estudio Diagonal XUR — Buenos Aires, Argentina</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
