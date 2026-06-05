@@ -1081,6 +1081,9 @@ body:not(.mobile-preview) #mobile-frame { all: unset; display: contents; }
     .next-btn { right: 0.6rem; }
     .moodboard-item { padding: 3rem 1rem 2rem; }
     .moodboard-item video, .moodboard-item img { max-height: 65vh; max-width: 100%; }
+    
+    /* --- Hide preview button in actual mobile --- */
+    #mobile-preview-btn { display: none !important; }
 }
 
 /* ==================== RESPONSIVE — SMALL MOBILE ==================== */

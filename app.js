@@ -1029,9 +1029,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const multiplier = 1 + 0.3 * (catalogDays - 1);
 
 
-        filtered.forEach(item => {
+        filtered.forEach((item, index) => {
             const card = document.createElement('div');
-            card.className = `product-card reveal ${item.isPack ? 'pack-card' : ''}`;
+            card.className = `product-card ${item.isPack ? 'pack-card' : ''}`;
+            card.style.opacity = '0';
+            card.style.animation = `fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards ${index * 0.05}s`;
             
             let mediaHtml = '';
             if (item.icon && item.id === 'desarrollos-especificos') {
@@ -1079,10 +1081,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             grid.appendChild(card);
-            
-            // Re-trigger observer for new elements
-            if (window.xurObserver) window.xurObserver.observe(card);
-            else card.classList.add('active'); // Fallback visibility
         });
     }
 
