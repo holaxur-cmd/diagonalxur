@@ -1082,6 +1082,9 @@ body:not(.mobile-preview) #mobile-frame { all: unset; display: contents; }
     .moodboard-item { padding: 3rem 1rem 2rem; }
     .moodboard-item video, .moodboard-item img { max-height: 65vh; max-width: 100%; }
     
+    /* --- Force visibility to prevent Observer WebView bugs --- */
+    .reveal { opacity: 1 !important; transform: none !important; }
+    
     /* --- Hide preview button in actual mobile --- */
     #mobile-preview-btn { display: none !important; }
 }
