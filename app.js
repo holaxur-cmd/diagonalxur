@@ -624,33 +624,33 @@ document.addEventListener('DOMContentLoaded', () => {
         'interactiva': {
             title: 'INSTALACIONES INTERACTIVAS',
             items: [
-                'assets/video/sevicios/Instalaciones Interactivas/DIAGONAL XUR_MUESTRA DANZA-min.mp4',
-                'assets/video/sevicios/Instalaciones Interactivas/EVENTO DIAGONAL XUR_LA RURAL-min.mp4',
-                'assets/video/sevicios/Pantallas táctiles y objetos digitales/La rural pantalla-min.mp4',
-                'assets/video/sevicios/Pantallas táctiles y objetos digitales/Interactive wall & floor@touchdesigner(1)-min.mp4'
+                '/assets/video/sevicios/Instalaciones Interactivas/DIAGONAL XUR_MUESTRA DANZA-min.mp4',
+                '/assets/video/sevicios/Instalaciones Interactivas/EVENTO DIAGONAL XUR_LA RURAL-min.mp4',
+                '/assets/video/sevicios/Pantallas táctiles y objetos digitales/La rural pantalla-min.mp4',
+                '/assets/video/sevicios/Pantallas táctiles y objetos digitales/Interactive wall & floor@touchdesigner(1)-min.mp4'
             ]
         },
         'live': {
             title: 'LIVE SHOWS & LÁSER',
             items: [
-                'assets/video/sevicios/wow momet sincro laser AV/07_SL_03-min.mp4',
-                'assets/video/sevicios/wow momet sincro laser AV/07_SL_04-min.mp4',
-                'assets/video/sevicios/wow momet sincro laser AV/Copy of Faena completo-min.mp4'
+                '/assets/video/sevicios/wow momet sincro laser AV/07_SL_03-min.mp4',
+                '/assets/video/sevicios/wow momet sincro laser AV/07_SL_04-min.mp4',
+                '/assets/video/sevicios/wow momet sincro laser AV/Copy of Faena completo-min.mp4'
             ]
         },
         'mapping': {
             title: 'CONTENT & MAPPING',
             items: [
-                'assets/video/sevicios/Mapping/ARMADO DIAGONAL XUR_LA RURAL_2-min.mp4',
-                'assets/video/sevicios/Mapping/04_M_01-min.mp4',
-                'assets/video/sevicios/Mapping/04_M_03-min.mp4'
+                '/assets/video/sevicios/Mapping/ARMADO DIAGONAL XUR_LA RURAL_2-min.mp4',
+                '/assets/video/sevicios/Mapping/04_M_01-min.mp4',
+                '/assets/video/sevicios/Mapping/04_M_03-min.mp4'
             ]
         },
         'games': {
             title: 'GAMIFICACIÓN',
             items: [
-                'assets/video/sevicios/Juegos interactivos  gamificación/06_JI_02-min.mp4',
-                'assets/video/sevicios/Juegos interactivos  gamificación/06_JI_04-min.mp4'
+                '/assets/video/sevicios/Juegos interactivos  gamificación/06_JI_02-min.mp4',
+                '/assets/video/sevicios/Juegos interactivos  gamificación/06_JI_04-min.mp4'
             ]
         }
     };
@@ -1041,8 +1041,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const ext = item.imgExt || 'jpg';
                 mediaHtml = `<div class="product-image-wrapper">
-                    <img src="assets/img/catalog/${item.id}/main.${ext}" 
-                         onerror="this.src='assets/img/placeholder-xur.jpg'; this.parentElement.classList.add('placeholder-loading')"
+                    <img src="/assets/img/catalog/${item.id}/main.${ext}" 
+                         onerror="this.src='/assets/img/placeholder-xur.jpg'; this.parentElement.classList.add('placeholder-loading')"
                          alt="${item.title}">
                 </div>`;
             }

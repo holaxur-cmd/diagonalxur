@@ -24,8 +24,16 @@ const MIME = {
 };
 
 const server = http.createServer((req, res) => {
-    let filePath = path.join(ROOT, req.url === '/' ? 'index.html' : req.url);
+    let urlPath = req.url === '/' ? '/index.html' : req.url;
+    // Remove query strings if any
+    urlPath = urlPath.split('?')[0];
+    let filePath = path.join(ROOT, urlPath);
     filePath = decodeURIComponent(filePath);
+
+    // If the path is a directory, serve index.html inside it
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+        filePath = path.join(filePath, 'index.html');
+    }
 
     const ext = path.extname(filePath);
     const contentType = MIME[ext] || 'application/octet-stream';

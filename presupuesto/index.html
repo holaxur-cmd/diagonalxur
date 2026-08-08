@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Presupuesto | XUR</title>
+    <meta name="description" content="Estudio Diagonal XUR - Diseñamos experiencias inmersivas que integran arte, tecnología y luz.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <button id="mobile-preview-btn" title="Vista Mobile [M]" aria-label="Toggle mobile preview">📱</button>
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img src="/assets/logo-xur.svg" alt="XUR" class="nav-logo-img">
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/equipo/" data-i18n="nav-about">Quiénes somos</a>
+            <a href="/servicios/" data-i18n="nav-services">Servicios</a>
+            <a href="/servicios/" data-i18n="nav-portfolio">Portfolio</a>
+            <a href="/catalogo/" data-i18n="catalog-title">Catálogo</a>
+            <a href="/workshops/" data-i18n="nav-workshops">WORKSHOPS</a>
+            <a href="/presupuesto/" data-i18n="nav-budget">CONTACTANOS</a>
+            <a href="/contacto/" data-i18n="nav-contact">REDES</a>
+            <button id="lang-btn" class="lang-btn">EN</button>
+        </div>
+    </nav>
+    <section id="presupuesto" class="reveal">
+        <div class="section-header">
+            <span class="section-num">06.</span>
+            <h2 data-i18n="budget-title">Contactanos</h2>
+        </div>
+        
+        <p class="budget-intro" data-i18n="budget-intro">Contanos tu idea</p>
+
+        <div class="budget-wizard" id="main-wizard" style="margin-top: 2rem;">
+            <div class="wizard-progress">
+                <span class="step-indicator" data-i18n="wiz-step-text">STEP <span id="current-step">01</span> / 05</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="wiz-progress"></div>
+                </div>
+            </div>
+
+            <!-- STEP 1: Escala -->
+            <div class="wizard-step active" data-step="1">
+                <h3 data-i18n="wiz-step-1-title">ESCALA DEL PROYECTO</h3>
+                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <button class="option-card" data-value="Club / Private">
+                        <span class="opt-icon">🎵</span>
+                        <strong data-i18n="wiz-opt-1-1">Club / Private</strong>
+                        <span data-i18n="wiz-opt-1-1-desc">Espacios íntimos o eventos privados.</span>
+                    </button>
+                    <button class="option-card" data-value="Corporativo">
+                        <span class="opt-icon">🏢</span>
+                        <strong data-i18n="wiz-opt-1-2">Corporativo</strong>
+                        <span data-i18n="wiz-opt-1-2-desc">Lanzamientos de marca, ferias o stands.</span>
+                    </button>
+                    <button class="option-card" data-value="Festival / Estadio">
+                        <span class="opt-icon">🎪</span>
+                        <strong data-i18n="wiz-opt-1-3">Festival / Estadio</strong>
+                        <span data-i18n="wiz-opt-1-3-desc">Grandes audiencias y escenarios masivos.</span>
+                    </button>
+                    <button class="option-card" data-value="Permanente">
+                        <span class="opt-icon">🏛️</span>
+                        <strong data-i18n="wiz-opt-1-4">Permanente</strong>
+                        <span data-i18n="wiz-opt-1-4-desc">Instalaciones fijas en museos o locales.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: Servicio -->
+            <div class="wizard-step" data-step="2">
+                <h3 data-i18n="wiz-step-2-title">TIPO DE SERVICIO</h3>
+                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <button class="option-card" data-value="Instalación Interactiva">
+                        <span class="opt-icon">🕳️</span>
+                        <strong data-i18n="wiz-opt-2-1">Instalación Interactiva</strong>
+                        <span data-i18n="wiz-opt-2-1-desc">Piso, pared o estructura reactiva.</span>
+                    </button>
+                    <button class="option-card" data-value="Laser / Luz">
+                        <span class="opt-icon">✨</span>
+                        <strong data-i18n="wiz-opt-2-2">Diseño Lumínico / Laser</strong>
+                        <span data-i18n="wiz-opt-2-2-desc">Cortinas de luz, columnas, efectos.</span>
+                    </button>
+                    <button class="option-card" data-value="Touch / Tótem">
+                        <span class="opt-icon">🖱️</span>
+                        <strong data-i18n="wiz-opt-2-3">Pantalla Táctil / Tótem</strong>
+                        <span data-i18n="wiz-opt-2-3-desc">Interfaz digital interactiva.</span>
+                    </button>
+                    <button class="option-card" data-value="Gamificación">
+                        <span class="opt-icon">🎮</span>
+                        <strong data-i18n="wiz-opt-2-4">Juego / Gamificación</strong>
+                        <span data-i18n="wiz-opt-2-4-desc">Competencia, ranking, sorteos.</span>
+                    </button>
+                    <button class="option-card" data-value="Sincro Laser">
+                        <span class="opt-icon">🌟</span>
+                        <strong data-i18n="wiz-opt-2-5">Sincro Láser</strong>
+                        <span data-i18n="wiz-opt-2-5-desc">Show de video + láser sincronizado.</span>
+                    </button>
+                    <button class="option-card" data-value="Combo">
+                        <span class="opt-icon">📦</span>
+                        <strong data-i18n="wiz-opt-2-6">Combo / Multiservicios</strong>
+                        <span data-i18n="wiz-opt-2-6-desc">Dos o más servicios combinados.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Presupuesto Estimado -->
+            <div class="wizard-step" data-step="3">
+                <h3 data-i18n="wiz-step-3b-title">PRESUPUESTO ESTIMADO (USD)</h3>
+                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                    <button class="option-card" data-value="menos de 2000">
+                        <strong>Menos de 2.000</strong>
+                    </button>
+                    <button class="option-card" data-value="2 a 5000">
+                        <strong>2.000 a 5.000</strong>
+                    </button>
+                    <button class="option-card" data-value="5 a 10000">
+                        <strong>5.000 a 10.000</strong>
+                    </button>
+                    <button class="option-card" data-value="10k a 20k">
+                        <strong>10.000 a 20.000</strong>
+                    </button>
+                    <button class="option-card" data-value="20 a 30">
+                        <strong>20.000 a 30.000</strong>
+                    </button>
+                    <button class="option-card" data-value="mas de 30">
+                        <strong>Más de 30.000</strong>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4: Detalles -->
+            <div class="wizard-step" data-step="4">
+                <h3 data-i18n="wiz-step-3-title">DETALLES DEL EVENTO</h3>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label data-i18n="f-date">Fecha estimada</label>
+                        <input type="date" id="budget-date" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-dur">Duración (días)</label>
+                        <select id="budget-duration" style="background: rgba(12,12,30,0.9); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                            <option value="1 día" data-i18n="opt-1d">1 día</option>
+                            <option value="2-3 días" data-i18n="opt-23d">2-3 días</option>
+                            <option value="1 semana" data-i18n="opt-1w">1 semana</option>
+                            <option value="Permanente" data-i18n="opt-perm">Permanente</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-loc">Ubicación</label>
+                        <input type="text" id="budget-location" placeholder="Ciudad o venue" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-aud">Audiencia estimada</label>
+                        <select id="budget-audience" style="background: rgba(12,12,30,0.9); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                            <option data-i18n="aud-1">Hasta 50 personas</option>
+                            <option data-i18n="aud-2">50-200 personas</option>
+                            <option data-i18n="aud-3">200-1000 personas</option>
+                            <option data-i18n="aud-4">+1000 personas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 5: Contacto -->
+            <div class="wizard-step" data-step="5">
+                <h3 data-i18n="wiz-step-4-title">DATOS DE CONTACTO</h3>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label data-i18n="f-name">Nombre / Empresa</label>
+                        <input type="text" id="budget-name" placeholder="" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field">
+                        <label data-i18n="f-email">Email</label>
+                        <input type="email" id="budget-email" placeholder="tu@email.com" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
+                    </div>
+                    <div class="form-field full" style="grid-column: 1 / -1; margin-top: 1rem;">
+                        <label data-i18n="f-notes">Notas adicionales</label>
+                        <textarea id="budget-notes" rows="3" placeholder="" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%; resize: none;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen final -->
+            <div class="wizard-step" data-step="6">
+                <h3 data-i18n="wiz-step-5-title">✔ SOLICITUD ENVIADA</h3>
+                <div id="budget-summary" style="margin-top: 1rem;"></div>
+            </div>
+
+            <div class="wizard-nav" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button class="wiz-btn wiz-back" id="wiz-back" style="display:none; flex: 1; padding: 1rem; background: transparent; border: 1px solid var(--border); color: white; cursor: pointer;" data-i18n="wiz-back">← ATRÁS</button>
+                <button class="wiz-btn wiz-next" id="wiz-next" style="flex: 1; padding: 1rem; background: var(--accent); border: none; color: black; cursor: pointer; font-weight: 700;" data-i18n="wiz-next">SIGUIENTE →</button>
+            </div>
+            <p class="budget-disclaimer" style="font-size: 0.7rem; color: var(--text-dim); margin-top: 1.5rem; text-align: center;" data-i18n="wiz-disclaimer">* El resultado es una estimación técnica basada en la complejidad de hardware y software.</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <img src="/assets/logo-xur.svg" alt="XUR" class="footer-logo">
+        <span>© 2026 Estudio Diagonal XUR — Buenos Aires, Argentina</span>
+    </footer>
+    <script src="/app.js"></script>
+</body>
+</html>

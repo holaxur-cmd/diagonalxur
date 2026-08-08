@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contacto | XUR</title>
+    <meta name="description" content="Estudio Diagonal XUR - Diseñamos experiencias inmersivas que integran arte, tecnología y luz.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <button id="mobile-preview-btn" title="Vista Mobile [M]" aria-label="Toggle mobile preview">📱</button>
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img src="/assets/logo-xur.svg" alt="XUR" class="nav-logo-img">
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/equipo/" data-i18n="nav-about">Quiénes somos</a>
+            <a href="/servicios/" data-i18n="nav-services">Servicios</a>
+            <a href="/servicios/" data-i18n="nav-portfolio">Portfolio</a>
+            <a href="/catalogo/" data-i18n="catalog-title">Catálogo</a>
+            <a href="/workshops/" data-i18n="nav-workshops">WORKSHOPS</a>
+            <a href="/presupuesto/" data-i18n="nav-budget">CONTACTANOS</a>
+            <a href="/contacto/" data-i18n="nav-contact">REDES</a>
+            <button id="lang-btn" class="lang-btn">EN</button>
+        </div>
+    </nav>
+    <section id="contacto" class="reveal">
+        <div class="section-header">
+            <span class="section-num">05.</span>
+            <h2 data-i18n="contact-title">Redes</h2>
+        </div>
+        <div class="contact-grid-enhanced">
+            <div class="contact-info-blocks">
+                <a href="mailto:hola.xur@gmail.com" class="contact-method-card">
+                    <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></div>
+                    <div class="method-detail">
+                        <span class="method-label">Email</span>
+                        <span class="method-value">hola.xur@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/5491133903141" target="_blank" class="contact-method-card">
+                    <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                    <div class="method-detail">
+                        <span class="method-label">WhatsApp</span>
+                        <span class="method-value">+54 9 11 3390 3141</span>
+                    </div>
+                </a>
+                <div class="contact-method-card no-hover">
+                    <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <div class="method-detail">
+                        <span class="method-label">Ubicación</span>
+                        <span class="method-value">Buenos Aires, Argentina</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-row">
+                <a href="https://www.instagram.com/diagonalxur/" target="_blank" title="Instagram" class="social-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://vimeo.com/diagonalxur" target="_blank" title="Vimeo" class="social-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.38C2 19.83 4.17 22 7.81 22h8.38c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2zM15.26 12l-4.43 2.56c-.33.19-.75-.05-.75-.44V8.88c0-.39.42-.63.75-.44L15.26 11c.33.19.33.69 0 .88z"/></svg>
+                    <span>Vimeo</span>
+                </a>
+                <a href="https://www.behance.net/diagonal-xur" target="_blank" title="Behance" class="social-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 12H3"/><path d="M3 6h4.5a2.5 2.5 0 0 1 0 5H3V6z"/><path d="M3 13h5a2.5 2.5 0 0 1 0 5H3v-5z"/><path d="M14 18c3.31 0 6-2.69 6-6s-2.69-6-6-6"/><path d="M14 12h6"/></svg>
+                    <span>Behance</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <img src="/assets/logo-xur.svg" alt="XUR" class="footer-logo">
+        <span>© 2026 Estudio Diagonal XUR — Buenos Aires, Argentina</span>
+    </footer>
+    <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Workshops | XUR</title>
+    <meta name="description" content="Estudio Diagonal XUR - Diseñamos experiencias inmersivas que integran arte, tecnología y luz.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <button id="mobile-preview-btn" title="Vista Mobile [M]" aria-label="Toggle mobile preview">📱</button>
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img src="/assets/logo-xur.svg" alt="XUR" class="nav-logo-img">
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/equipo/" data-i18n="nav-about">Quiénes somos</a>
+            <a href="/servicios/" data-i18n="nav-services">Servicios</a>
+            <a href="/servicios/" data-i18n="nav-portfolio">Portfolio</a>
+            <a href="/catalogo/" data-i18n="catalog-title">Catálogo</a>
+            <a href="/workshops/" data-i18n="nav-workshops">WORKSHOPS</a>
+            <a href="/presupuesto/" data-i18n="nav-budget">CONTACTANOS</a>
+            <a href="/contacto/" data-i18n="nav-contact">REDES</a>
+            <button id="lang-btn" class="lang-btn">EN</button>
+        </div>
+    </nav>
+    <section id="workshops" class="reveal">
+        <div class="section-header">
+            <span class="section-num">05.</span>
+            <h2 data-i18n="workshops-title">Workshops</h2>
+        </div>
+        
+        <style>
+            .bento-workshops {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-auto-rows: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            .bento-long { grid-column: span 3; }
+            .bento-short { grid-column: span 2; }
+            
+            .bento-prox {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .bento-prox-bg {
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background-size: cover;
+                background-position: center;
+                opacity: 0.15;
+                z-index: 0;
+            }
+
+            .bento-prox-content {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media (max-width: 768px) {
+                .bento-long, .bento-short { grid-column: span 5; }
+                .bento-workshops { grid-auto-rows: auto; }
+            }
+        </style>
+        <div class="bento-workshops">
+            <!-- Workshop 1 (Largo) -->
+            <div class="team-card bento-long" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(255,255,255,0.1);">
+                <div class="card-glow"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg'); opacity: 0.25;"></div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <span class="bento-tag" style="margin-bottom: 0.8rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
+                    <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
+                        <strong>Fechas:</strong> Miércoles 19/08 y Jueves 20/08<br>
+                        <strong>Duración:</strong> 2 días (4hs por jornada)<br>
+                        <strong>Lugar:</strong> DIAGONAL XUR
+                    </p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Exploración de herramientas digitales para el diseño de experiencias interactivas y entornos inmersivos.</p>
+                </div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <button onclick="document.getElementById('workshop-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="width: 100%; margin-bottom: 0.8rem; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: white;">VER INFORMACIÓN Y TEMARIO</button>
+
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER%3A%20LABORATORIO%20INMERSIVO%20%28Mi%C3%A9rcoles%2019%2F08%20y%20Jueves%2020%2F08%2C%20en%20DIAGONAL%20XUR%29." target="_blank" class="cta-btn" style="flex: 1; text-align: center; padding: 0.7rem; font-size: 0.8rem;">WhatsApp</a>
+                        <a href="mailto:hola.xur@gmail.com?subject=Reserva%20Workshop%20TouchDesigner&body=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER:%20LABORATORIO%20INMERSIVO%20(Miércoles%2019/08%20y%20Jueves%2020/08,%20en%20DIAGONAL%20XUR)." class="cta-btn" style="flex: 1; text-align: center; padding: 0.7rem; font-size: 0.8rem; background: transparent; border: 1px solid white; color: white;">Email</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 2 (Corto) -->
+            <div class="team-card bento-short bento-prox">
+                <div class="card-glow"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg');"></div>
+                <div class="bento-prox-content">
+                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
+                    <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
+                </div>
+            </div>
+
+            <!-- Workshop 3 (Corto) -->
+            <div class="team-card bento-short bento-prox">
+                <div class="card-glow"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DSC09641-min.jpg');"></div>
+                <div class="bento-prox-content">
+                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
+                    <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
+                </div>
+            </div>
+
+            <!-- Workshop 4 (Largo) -->
+            <div class="team-card bento-long bento-prox">
+                <div class="card-glow"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DSC09718-min.jpg');"></div>
+                <div class="bento-prox-content">
+                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
+                    <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="workshop-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 99999; backdrop-filter: blur(10px); justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: rgba(12,12,30,0.95); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; max-width: 1040px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+            <button onclick="document.getElementById('workshop-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+                <!-- Columna Izquierda: Info + Media -->
+                <div>
+                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white; font-weight: 800; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
+                    <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                        <strong>Fechas:</strong> Miércoles 19/08 y Jueves 20/08<br>
+                        <strong>Duración:</strong> 2 días (4hs por jornada)<br>
+                        <strong>Lugar:</strong> DIAGONAL XUR
+                    </p>
+                    
+                    <div style="font-size: 1rem; color: #ddd; line-height: 1.6; margin-bottom: 2rem;">
+                        <p style="margin-bottom: 1rem;">Abrimos las puertas de nuestro laboratorio. Anunciamos una nueva edición del Workshop presencial de TouchDesigner.</p>
+                        <p style="margin-bottom: 1rem;">
+@EFFE.cinco (Facundo Marrazzo) se desempeña como VJ y Artista visual, especializado en arte generativo y en la creación de experiencias audiovisuales interactivas. Su enfoque se centra en explorar nuevos medios y la tecnología, experimentando con materiales fluidos audio‑reactivos y objetos 3D filosos y refractivos generados en tiempo real. Utiliza herramientas como TouchDesigner, Fotogrametria, Stable Diffusion, Depence, Madmapper, Ableton Live y Kinect, así como otros sensores, para intervenir los espacios y hacerlos interactivos. Además, será la persona que dictará el workshop. <a href="https://www.instagram.com/effe.cinco/" target="_blank" style="color: #00ffff; text-decoration: underline;">@effe.cinco</a>
+</p>
+                        <p style="margin-bottom: 1rem;">En <a href="https://distorxion.com.ar" target="_blank" style="color: #00ffff; text-decoration: underline;">Distorxionn</a> creemos en la exploración constante de nuevas formas de integrar tecnología y creatividad. Cada proyecto es un laboratorio donde experimentamos con técnicas innovadoras, transformando espacios en experiencias que conectan emociones y entorno.</p>
+                    </div>
+
+                    <video src="/assets/Material_workshop/MM5_F_1-min.mp4" autoplay loop muted playsinline style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1);"></video>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem;">
+                        <img src="/assets/Material_workshop/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg" style="width: 100%; border-radius: 6px; aspect-ratio: 16/9; object-fit: cover;">
+                        <img src="/assets/Material_workshop/DSC09718-min.jpg" style="width: 100%; border-radius: 6px; aspect-ratio: 16/9; object-fit: cover;">
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-size: 1.3rem; font-weight: bold; color: white;">Valor del Workshop: $150.000</span>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER%3A%20LABORATORIO%20INMERSIVO%20%28Mi%C3%A9rcoles%2019%2F08%20y%20Jueves%2020%2F08%2C%20en%20DIAGONAL%20XUR%29." target="_blank" class="cta-btn" style="flex: 1; min-width: 150px; text-align: center; padding: 1rem; font-size: 0.95rem;">Reservar por WhatsApp</a>
+                        <a href="mailto:hola.xur@gmail.com?subject=Reserva%20Workshop%20TouchDesigner&body=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER:%20LABORATORIO%20INMERSIVO%20(Miércoles%2019/08%20y%20Jueves%2020/08,%20en%20DIAGONAL%20XUR)." class="cta-btn" style="flex: 1; min-width: 150px; text-align: center; padding: 1rem; font-size: 0.95rem; background: transparent; border: 1px solid white; color: white;">Reservar por Email</a>
+                    </div>
+                </div>
+                
+                <!-- Columna Derecha: Temario -->
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.4rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;">Temario Detallado</h4>
+                    
+                    <div style="margin-bottom: 2.5rem; font-size: 0.95rem; color: #ddd;">
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 1: Introducción al Entorno de TouchDesigner</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>1.1. Primeros Pasos y Organización:</strong> Entorno visual basado en nodos, buenas prácticas, uso de Containers/Bases, Nulls y colores.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.2. Usos de TD:</strong> Generación en tiempo real, automatización, sensores, videomapping y sincronización láser.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.3. Generación de Video:</strong> Operadores TOP, composición 2D, creación de geometría 3D, Instancing (técnica GPU), Pointclouds y Shaders.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.4. Sincronizaciones y UI:</strong> Audio FFT, MIDI/OSC, Timecode, y creación de interfaces gráficas.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.5. Familias de Operadores:</strong> COMP, TOP, CHOP, SOP, MAT, DAT.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.6. Recursos Clave:</strong> OP Snippets, Wiki y Foros de Derivative.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 2: Audioreactividad</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>2.1. Análisis de Señal:</strong> Captura, Transformada de Fourier (FFT), aislamiento de frecuencias, suavizado (Lag/Filter) y mapeo (Math).</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>2.2. Ejemplos de Ajustes:</strong> Control audioreactivo de visuales 2D y 3D.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 3: TouchDesigner + Resolume (VJ Workflow)</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>3.1. Protocolos de Envío:</strong> Uso de Spout/Syphon para latencia cero y NDI para red local.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>3.2. Control MIDI:</strong> Manipulación de parámetros en vivo desde un controlador externo.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 4: Interactividad y Tracking</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>4.1. Hardware Dedicado:</strong> Introducción a Kinect.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>4.2. MediaPipe:</strong> Machine Learning de Google para tracking de cuerpo (Pose), rostro (Face Mesh) y manos usando solo webcam.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 5: Optimización y Workflows en Vivo</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>5.1. Desglose de Show Real:</strong> UI, Switch TOP, carga asíncrona y Monitor de Rendimiento (Perform CHOP).</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>5.2. Práctica Final (JAM):</strong> Experimento colaborativo enviando visuales vía NDI hacia un servidor central.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <img src="/assets/logo-xur.svg" alt="XUR" class="footer-logo">
+        <span>© 2026 Estudio Diagonal XUR — Buenos Aires, Argentina</span>
+    </footer>
+    <script src="/app.js"></script>
+</body>
+</html>

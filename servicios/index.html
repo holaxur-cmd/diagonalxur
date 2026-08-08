@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Servicios | XUR</title>
+    <meta name="description" content="Estudio Diagonal XUR - Diseñamos experiencias inmersivas que integran arte, tecnología y luz.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <button id="mobile-preview-btn" title="Vista Mobile [M]" aria-label="Toggle mobile preview">📱</button>
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img src="/assets/logo-xur.svg" alt="XUR" class="nav-logo-img">
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/equipo/" data-i18n="nav-about">Quiénes somos</a>
+            <a href="/servicios/" data-i18n="nav-services">Servicios</a>
+            <a href="/servicios/" data-i18n="nav-portfolio">Portfolio</a>
+            <a href="/catalogo/" data-i18n="catalog-title">Catálogo</a>
+            <a href="/workshops/" data-i18n="nav-workshops">WORKSHOPS</a>
+            <a href="/presupuesto/" data-i18n="nav-budget">CONTACTANOS</a>
+            <a href="/contacto/" data-i18n="nav-contact">REDES</a>
+            <button id="lang-btn" class="lang-btn">EN</button>
+        </div>
+    </nav>
+    <section id="que-hacemos" class="reveal">
+        <div class="section-header">
+            <span class="section-num">02.</span>
+            <h2 data-i18n="what-title">Qué hacemos</h2>
+        </div>
+        <p class="large-statement" data-i18n="what-statement">Diseñamos y desarrollamos experiencias inmersivas que integran arte, tecnología y luz, transformando la percepción del espacio y generando interacción significativa con el público.</p>
+        <div class="capabilities-list">
+            <div class="cap-item">
+                <h4 data-i18n="cap-1-title">Diseño de espacios y objetos interactivos</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-2-title">Contenido visual y dirección de arte</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-3-title">Tecnología de sensores propia</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-4-title">Software con licencias oficiales</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-5-title">Equipo interdisciplinario</h4>
+            </div>
+            <div class="cap-item">
+                <h4 data-i18n="cap-6-title">Equipo técnico para eventos</h4>
+            </div>
+        </div>
+    </section>
+    <section id="servicios-detail" class="reveal">
+        <div class="section-header">
+            <span class="section-num">03.</span>
+            <h2 data-i18n="services-title">Servicios</h2>
+        </div>
+        
+        <div class="services-bento">
+            <!-- Item 1: Experiencias Interactivas (Large) -->
+            <div class="bento-card bento-large interactive-bg" data-project="interactiva">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-1-tag">PROYECTOS DE MARCA</span>
+                    <h3 data-i18n="bento-1-title">INSTALACIONES<br>INTERACTIVAS</h3>
+                    <p data-i18n="bento-1-desc">Tótems, pisos sensibles y gamificación para activaciones de alto impacto.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="/assets/video/sevicios/Instalaciones Interactivas/EVENTO DIAGONAL XUR_LA RURAL-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Item 2: Live Shows (Medium) -->
+            <div class="bento-card live-bg" data-project="live">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-2-tag">STAGE & PERFORMANCE</span>
+                    <h3 data-i18n="bento-2-title">LIVE SHOWS & LÁSER</h3>
+                    <p data-i18n="bento-2-desc">VJ Sets, shows de láser sincronizado y estructuras cinéticas.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="/assets/video/sevicios/wow momet sincro laser AV/07_SL_03-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Item 3: Content Design (Medium) -->
+            <div class="bento-card content-bg" data-project="mapping">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-3-tag">VISUAL ARCHITECTURE</span>
+                    <h3 data-i18n="bento-3-title">CONTENT & MAPPING</h3>
+                    <p data-i18n="bento-3-desc">Dirección de arte y 3D Mapping sobre superficies complejas.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="/assets/video/sevicios/Mapping/04_M_01-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Item 4: Gamificación (Wide) -->
+            <div class="bento-card bento-wide games-bg" data-project="games">
+                <div class="bento-content">
+                    <span class="bento-tag" data-i18n="bento-4-tag">PLAY & CONNECT</span>
+                    <h3 data-i18n="bento-4-title">GAMIFICACIÓN</h3>
+                    <p data-i18n="bento-4-desc">Juegos interactivos y dinámicas de competencia para marcas.</p>
+                </div>
+                <div class="bento-media">
+                    <video src="/assets/video/sevicios/Juegos interactivos  gamificación/06_JI_02-min.mp4" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Moodboard moved to end of document -->
+
+    </section>
+
+    <div id="moodboard-explorer" class="moodboard-explorer">
+        <button id="close-moodboard" class="close-moodboard">CERRAR ✕</button>
+        <div class="moodboard-header">
+            <h3 id="moodboard-title">PROYECTO SELECCIONADO</h3>
+        </div>
+        <div class="moodboard-slider-container">
+            <button id="moodboard-prev" class="slider-btn prev-btn">←</button>
+            <div class="moodboard-slider" id="moodboard-slider"></div>
+            <button id="moodboard-next" class="slider-btn next-btn">→</button>
+        </div>
+        <div class="slider-pagination" id="slider-pagination"></div>
+    </div>
+
+    <footer>
+        <img src="/assets/logo-xur.svg" alt="XUR" class="footer-logo">
+        <span>© 2026 Estudio Diagonal XUR — Buenos Aires, Argentina</span>
+    </footer>
+    <script src="/app.js"></script>
+</body>
+</html>
