@@ -308,8 +308,8 @@
                     </div>
                     <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Presencial: 15 cupos</span>
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Virtual: hasta 30</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.4); color: #00e5ff;">Presencial: $180.000 (3 cuotas: $230.000)</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.4); color: #a855f7;">Virtual: $75.000 (3 cuotas: $95.000)</span>
                     </div>
                     <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
                         <strong>Fechas:</strong> Lunes 22/09 · 29/09 · 06/10<br>
@@ -574,12 +574,15 @@
                         <div style="display: flex; flex-direction: column; gap: 1rem;">
                             <!-- Opción Presencial -->
                             <div style="background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.3); border-radius: 8px; padding: 1rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
                                     <div>
                                         <span style="font-weight: bold; color: #00e5ff; font-size: 0.95rem;">MODALIDAD PRESENCIAL</span>
                                         <span style="display: block; font-size: 0.75rem; color: #aaa;">15 cupos en el laboratorio</span>
                                     </div>
-                                    <span style="font-size: 1.3rem; font-weight: 900; color: white;">$180.000</span>
+                                    <div style="text-align: right;">
+                                        <span style="font-size: 1.2rem; font-weight: 900; color: white;">$180.000 <span style="font-size: 0.75rem; color: #aaa; font-weight: normal;">(Transf)</span></span>
+                                        <span style="display: block; font-size: 0.78rem; color: #00e5ff; font-weight: bold;">3 cuotas de $76.666 ($230.000)</span>
+                                    </div>
                                 </div>
                                 <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
                                     RESERVAR PRESENCIAL
@@ -588,12 +591,15 @@
 
                             <!-- Opción Virtual -->
                             <div style="background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.3); border-radius: 8px; padding: 1rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem;">
                                     <div>
                                         <span style="font-weight: bold; color: #00e5ff; font-size: 0.95rem;">MODALIDAD VIRTUAL</span>
                                         <span style="display: block; font-size: 0.75rem; color: #aaa;">Hasta 30 cupos en vivo / grabado</span>
                                     </div>
-                                    <span style="font-size: 1.3rem; font-weight: 900; color: white;">$75.000</span>
+                                    <div style="text-align: right;">
+                                        <span style="font-size: 1.2rem; font-weight: 900; color: white;">$75.000 <span style="font-size: 0.75rem; color: #aaa; font-weight: normal;">(Transf)</span></span>
+                                        <span style="display: block; font-size: 0.78rem; color: #a855f7; font-weight: bold;">3 cuotas de $31.666 ($95.000)</span>
+                                    </div>
                                 </div>
                                 <button onclick="abrirInscripcion('virtual');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
                                     RESERVAR VIRTUAL
@@ -832,6 +838,58 @@
                     <input type="hidden" id="ins-modalidad" value="presencial">
                 </div>
 
+                <!-- Selector de Medio de Pago -->
+                <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.2rem;">
+                    <label style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Medio de Pago *</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+                        <button type="button" id="pago-opt-transf" onclick="setMedioPago('transf')" style="padding: 0.75rem; border-radius: 6px; border: 1px solid #00e5ff; background: rgba(0,229,255,0.12); color: white; cursor: pointer; font-family: var(--font-display); font-size: 0.8rem; font-weight: bold; transition: all 0.3s;">
+                            TRANSFERENCIA<br><span id="pago-price-transf" style="font-size: 0.72rem; color: #00e5ff; font-weight: normal;">$180.000</span>
+                        </button>
+                        <button type="button" id="pago-opt-mp" onclick="setMedioPago('mp')" style="padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.03); color: #aaa; cursor: pointer; font-family: var(--font-display); font-size: 0.8rem; font-weight: bold; transition: all 0.3s;">
+                            3 CUOTAS TARJETA<br><span id="pago-price-mp" style="font-size: 0.72rem; color: #aaa; font-weight: normal;">$230.000</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="ins-medio-pago" value="transf">
+                </div>
+
+                <!-- BOX DATOS BANCARIOS (Se muestra cuando Medio de Pago = transf) -->
+                <div id="box-datos-transferencia" style="background: rgba(0,229,255,0.05); border: 1px dashed rgba(0,229,255,0.3); border-radius: 8px; padding: 1rem; margin-top: 0.3rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                        <span style="font-size: 0.8rem; font-weight: bold; color: #00e5ff; text-transform: uppercase; letter-spacing: 1px;">Datos para Transferir</span>
+                        <span style="font-size: 0.7rem; color: #888;">DolarApp (Garpa S.A.)</span>
+                    </div>
+
+                    <div style="font-size: 0.82rem; color: #ddd; display: flex; flex-direction: column; gap: 0.45rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span><strong>Titular:</strong> Facundo Marrazzo</span>
+                            <span style="font-size: 0.75rem; color: #888;">DNI: 38128340</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); padding: 0.4rem 0.6rem; border-radius: 4px;">
+                            <span><strong>Alias:</strong> <code style="color: #00e5ff;">carite.deja.dolarapp</code></span>
+                            <button type="button" onclick="copiarTexto('carite.deja.dolarapp', this);" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; cursor: pointer;">Copiar</button>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); padding: 0.4rem 0.6rem; border-radius: 4px;">
+                            <span><strong>CVU:</strong> <code style="color: #00e5ff;">0000069709015527845484</code></span>
+                            <button type="button" onclick="copiarTexto('0000069709015527845484', this);" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; cursor: pointer;">Copiar</button>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.75rem; color: #aaa; margin-top: 0.6rem; margin-bottom: 0; line-height: 1.3;">
+                        📌 Transferí el monto e ingresá tus datos abajo para enviar el comprobante por WhatsApp o Email.
+                    </p>
+                </div>
+
+                <!-- BOX OPCIÓN MERCADO PAGO 3 CUOTAS (Se muestra cuando Medio de Pago = mp) -->
+                <div id="box-datos-mercadopago" style="display: none; background: rgba(168,85,247,0.06); border: 1px dashed rgba(168,85,247,0.4); border-radius: 8px; padding: 1rem; margin-top: 0.3rem;">
+                    <span style="font-size: 0.8rem; font-weight: bold; color: #a855f7; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.4rem;">Pago en 3 Cuotas con Tarjeta</span>
+                    <p style="font-size: 0.78rem; color: #ccc; margin-bottom: 0.8rem; line-height: 1.4;">
+                        Aboná con tarjeta a través de Mercado Pago en 3 cuotas fijas. Podés completar tus datos para la lista y hacer clic en el botón para abonar.
+                    </p>
+                    <a id="ins-link-pago-directo" href="https://mpago.li/2GBLeA8" target="_blank" rel="noopener" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: #a855f7; color: white; border: none; text-decoration: none; display: block; box-shadow: 0 0 15px rgba(168,85,247,0.3);">
+                        PAGAR EN 3 CUOTAS CON MERCADO PAGO
+                    </a>
+                </div>
+
                 <!-- Nombre completo -->
                 <div style="display: flex; flex-direction: column; gap: 0.3rem;">
                     <label for="ins-nombre" style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Nombre y Apellido *</label>
@@ -867,20 +925,14 @@
                     <div style="display: flex; gap: 0.8rem;">
                         <button type="button" onclick="procesarInscripcionWhatsApp();" class="cta-btn" style="flex: 1; text-align: center; padding: 0.95rem; font-size: 0.85rem; font-weight: bold; background: #25D366; color: black; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            WHATSAPP
+                            ENVIAR COMPROBANTE WHATSAPP
                         </button>
                         <button type="button" onclick="procesarInscripcionEmail();" class="cta-btn" style="flex: 1; text-align: center; padding: 0.95rem; font-size: 0.85rem; font-weight: bold; background: transparent; border: 1px solid white; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            EMAIL
+                            ENVIAR POR EMAIL
                         </button>
                     </div>
-
-                    <a id="ins-link-pago-directo" href="https://mpago.li/2GBLeA8" target="_blank" rel="noopener" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: transparent; border: 1px solid var(--accent); color: var(--accent); text-decoration: none;">
-                        PAGAR AHORA CON LINK
-                    </a>
                 </div>
-
-            </form>
         </div>
     </div>
 
@@ -940,15 +992,25 @@
     }
 
     // --- CONFIGURACIÓN Y FORMULARIO DE INSCRIPCIÓN DINÁMICO ---
+    const BANK_DETAILS = {
+        alias: 'carite.deja.dolarapp',
+        titular: 'Facundo Marrazzo',
+        cvu: '0000069709015527845484',
+        dni: '38128340',
+        banco: 'DolarApp (Garpa S.A.)'
+    };
+
     const WORKSHOPS_CONFIG = {
         'td2': {
             modalId: 'workshop-td2-modal',
             title: 'Inscripción Workshop TouchDesigner v2',
             name: 'Workshop TouchDesigner v2 (Laboratorio Inmersivo)',
-            presencialPrice: '$180.000',
-            virtualPrice: '$75.000',
+            prices: {
+                'presencial': { transf: '$180.000', cuotas: '$230.000' },
+                'virtual': { transf: '$75.000', cuotas: '$95.000' }
+            },
             hasVirtual: true,
-            paymentLinks: {
+            mpLinks: {
                 'presencial': 'https://mpago.li/2GBLeA8',
                 'virtual': 'https://mpago.li/1MsUNyb'
             }
@@ -957,10 +1019,11 @@
             modalId: 'workshop-laser-modal',
             title: 'Inscripción Workshop Fundamentos Láser para Shows',
             name: 'Workshop Fundamentos Láser para Shows (06/10 y 07/10)',
-            presencialPrice: '$150.000',
-            virtualPrice: null,
+            prices: {
+                'presencial': { transf: '$150.000', cuotas: '$150.000' }
+            },
             hasVirtual: false,
-            paymentLinks: {
+            mpLinks: {
                 'presencial': 'https://mpago.li/2GBLeA8'
             }
         }
@@ -990,7 +1053,9 @@
 
         document.getElementById('ws-inscripcion-modal').style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        
         setModalidadInscripcion(modalidad || 'presencial');
+        setMedioPago('transf');
     }
 
     function setModalidadInscripcion(mod) {
@@ -998,14 +1063,25 @@
         document.getElementById('ins-modalidad').value = mod;
         const btnPresencial = document.getElementById('mod-opt-presencial');
         const btnVirtual = document.getElementById('mod-opt-virtual');
-        const linkPago = document.getElementById('ins-link-pago-directo');
 
-        // Actualizar montos en botones
+        const pObj = ws.prices[mod] || ws.prices['presencial'];
+
+        // Actualizar montos en botones de modalidad
         if (btnPresencial.querySelector('span')) {
-            btnPresencial.querySelector('span').innerText = ws.presencialPrice;
+            btnPresencial.querySelector('span').innerText = ws.prices.presencial.transf;
         }
         if (ws.hasVirtual && btnVirtual.querySelector('span')) {
-            btnVirtual.querySelector('span').innerText = ws.virtualPrice;
+            btnVirtual.querySelector('span').innerText = ws.prices.virtual.transf;
+        }
+
+        // Actualizar montos en selector de medio de pago
+        document.getElementById('pago-price-transf').innerText = pObj.transf;
+        document.getElementById('pago-price-mp').innerText = pObj.cuotas;
+
+        // Actualizar link de Mercado Pago
+        const linkPago = document.getElementById('ins-link-pago-directo');
+        if (linkPago) {
+            linkPago.href = ws.mpLinks[mod] || ws.mpLinks['presencial'] || '#';
         }
 
         if (mod === 'presencial' || !ws.hasVirtual) {
@@ -1020,9 +1096,6 @@
                 btnVirtual.style.color = '#aaa';
                 if (btnVirtual.querySelector('span')) btnVirtual.querySelector('span').style.color = '#aaa';
             }
-
-            linkPago.innerText = `PAGAR PRESENCIAL AHORA (${ws.presencialPrice})`;
-            linkPago.href = ws.paymentLinks.presencial || '#';
         } else {
             btnVirtual.style.border = '1px solid var(--accent)';
             btnVirtual.style.background = 'rgba(0,229,255,0.12)';
@@ -1033,9 +1106,66 @@
             btnPresencial.style.background = 'rgba(255,255,255,0.03)';
             btnPresencial.style.color = '#aaa';
             if (btnPresencial.querySelector('span')) btnPresencial.querySelector('span').style.color = '#aaa';
+        }
+    }
 
-            linkPago.innerText = `PAGAR VIRTUAL AHORA (${ws.virtualPrice})`;
-            linkPago.href = ws.paymentLinks.virtual || '#';
+    function setMedioPago(medio) {
+        document.getElementById('ins-medio-pago').value = medio;
+        const btnTransf = document.getElementById('pago-opt-transf');
+        const btnMp = document.getElementById('pago-opt-mp');
+        const boxTransf = document.getElementById('box-datos-transferencia');
+        const boxMp = document.getElementById('box-datos-mercadopago');
+
+        if (medio === 'transf') {
+            btnTransf.style.border = '1px solid #00e5ff';
+            btnTransf.style.background = 'rgba(0,229,255,0.12)';
+            btnTransf.style.color = 'white';
+            if (btnTransf.querySelector('span')) btnTransf.querySelector('span').style.color = '#00e5ff';
+
+            btnMp.style.border = '1px solid rgba(255,255,255,0.15)';
+            btnMp.style.background = 'rgba(255,255,255,0.03)';
+            btnMp.style.color = '#aaa';
+            if (btnMp.querySelector('span')) btnMp.querySelector('span').style.color = '#aaa';
+
+            boxTransf.style.display = 'block';
+            boxMp.style.display = 'none';
+        } else {
+            btnMp.style.border = '1px solid #a855f7';
+            btnMp.style.background = 'rgba(168,85,247,0.12)';
+            btnMp.style.color = 'white';
+            if (btnMp.querySelector('span')) btnMp.querySelector('span').style.color = '#a855f7';
+
+            btnTransf.style.border = '1px solid rgba(255,255,255,0.15)';
+            btnTransf.style.background = 'rgba(255,255,255,0.03)';
+            btnTransf.style.color = '#aaa';
+            if (btnTransf.querySelector('span')) btnTransf.querySelector('span').style.color = '#aaa';
+
+            boxTransf.style.display = 'none';
+            boxMp.style.display = 'block';
+        }
+    }
+
+    function copiarTexto(texto, btnEl) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(texto).then(() => {
+                const orig = btnEl.innerText;
+                btnEl.innerText = '¡Copiado!';
+                btnEl.style.background = '#00e5ff';
+                btnEl.style.color = '#000';
+                setTimeout(() => {
+                    btnEl.innerText = orig;
+                    btnEl.style.background = 'rgba(255,255,255,0.1)';
+                    btnEl.style.color = '#fff';
+                }, 1800);
+            });
+        } else {
+            const el = document.createElement('textarea');
+            el.value = texto;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Copiado al portapapeles: ' + texto);
         }
     }
 
@@ -1053,8 +1183,11 @@
         const ws = WORKSHOPS_CONFIG[currentWsId];
         const obs = document.getElementById('ins-obs').value.trim();
         const mod = document.getElementById('ins-modalidad').value;
-        const precio = mod === 'presencial' ? ws.presencialPrice : ws.virtualPrice;
-        const modTexto = `${mod.toUpperCase()} (${precio})`;
+        const medio = document.getElementById('ins-medio-pago').value;
+        const pObj = ws.prices[mod] || ws.prices['presencial'];
+        const precio = medio === 'transf' ? pObj.transf : pObj.cuotas;
+        const medioTexto = medio === 'transf' ? 'TRANSFERENCIA BANCARIA' : '3 CUOTAS MERCADO PAGO';
+        const modTexto = `${mod.toUpperCase()} — ${medioTexto} (${precio})`;
 
         return { nombre, email, dni, tel, obs, modTexto, wsName: ws.name };
     }
@@ -1070,7 +1203,7 @@
                   `• *Email:* ${datos.email}\n` +
                   `• *DNI:* ${datos.dni}\n` +
                   `• *Teléfono:* ${datos.tel}\n` +
-                  `• *Modalidad:* ${datos.modTexto}\n`;
+                  `• *Modalidad & Pago:* ${datos.modTexto}\n`;
 
         if (datos.obs) {
             msg += `• *Observaciones:* ${datos.obs}\n`;
@@ -1094,7 +1227,7 @@
                    `- Email: ${datos.email}\n` +
                    `- DNI: ${datos.dni}\n` +
                    `- Teléfono: ${datos.tel}\n` +
-                   `- Modalidad: ${datos.modTexto}\n`;
+                   `- Modalidad & Pago: ${datos.modTexto}\n`;
 
         if (datos.obs) {
             body += `- Observaciones: ${datos.obs}\n`;
