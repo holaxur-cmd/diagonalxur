@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pago recibido | XUR</title>
+    <meta name="description" content="Gracias por tu inscripción al workshop de DIAGONAL XUR.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img src="/assets/logo-xur.svg" alt="XUR" class="nav-logo-img">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/workshops/">WORKSHOPS</a>
+            <a href="/">INICIO</a>
+        </div>
+    </nav>
+
+    <section class="pago-exitoso">
+        <div class="pe-icon">✓</div>
+        <span class="pe-kicker">INSCRIPCIÓN REGISTRADA</span>
+        <h1>¡Gracias por tu inscripción!</h1>
+        <p class="pe-desc">
+            Tu lugar quedó reservado. Si ya completaste el pago, enviá tu comprobante
+            por WhatsApp o Email para confirmarlo y coordinamos los detalles del curso.
+        </p>
+
+        <div class="pe-acciones">
+            <a href="https://wa.me/5491133903141?text=Hola!%20Acabo%20de%20completar%20el%20pago%20de%20mi%20inscripción%20al%20workshop%20de%20DIAGONAL%20XUR.%20Adjunto%20mi%20comprobante." target="_blank" class="pe-btn wa">Enviar comprobante por WhatsApp</a>
+            <a href="mailto:hola.xur@gmail.com?subject=Comprobante%20de%20pago%20-%20Workshop&body=Hola!%20Adjunto%20mi%20comprobante%20de%20pago%20de%20la%20inscripción%20al%20workshop." class="pe-btn mail">Enviar comprobante por Email</a>
+        </div>
+
+        <a href="/workshops/" class="pe-volver">← Volver a los workshops</a>
+    </section>
+
+    <footer>
+        <img src="/assets/logo-xur.svg" alt="XUR" class="footer-logo">
+        <span>© 2026 Estudio Diagonal XUR — Buenos Aires, Argentina</span>
+    </footer>
+
+    <script src="/app.js"></script>
+    <style>
+        .pago-exitoso {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+        }
+        .pe-icon {
+            width: 90px; height: 90px;
+            border-radius: 50%;
+            background: rgba(0,229,255,0.1);
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            font-size: 3rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 50px rgba(0,229,255,0.25);
+            animation: pe-pop 0.6s var(--ease);
+        }
+        @keyframes pe-pop {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.08); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .pe-kicker {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+        .pago-exitoso h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 1.2rem;
+        }
+        .pe-desc {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 520px;
+            margin-bottom: 2rem;
+        }
+        .pe-acciones {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            width: 100%;
+            max-width: 380px;
+            margin-bottom: 2rem;
+        }
+        .pe-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.95rem;
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s var(--ease);
+        }
+        .pe-btn.wa {
+            background: rgba(37,211,102,0.12);
+            border: 1px solid rgba(37,211,102,0.5);
+            color: #6ee7a0;
+        }
+        .pe-btn.wa:hover { background: rgba(37,211,102,0.2); box-shadow: 0 0 24px rgba(37,211,102,0.3); }
+        .pe-btn.mail {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+        }
+        .pe-btn.mail:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(0,229,255,0.2); }
+        .pe-volver {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .pe-volver:hover { color: var(--accent); }
+        @media (max-width: 768px) {
+            .pago-exitoso h1 { font-size: 2rem; }
+        }
+    </style>
+</body>
+</html>

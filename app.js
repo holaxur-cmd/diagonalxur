@@ -209,8 +209,19 @@ document.addEventListener('DOMContentLoaded', () => {
 (function () {
     'use strict';
 
-    // ==================== PARTICLE SYSTEM (solo en Hero) ====================
+    // ==================== PARTICLE SYSTEM (solo en Home) ====================
     const canvas = document.getElementById('particles');
+    if (!canvas) return;
+
+    // Las partículas solo corren en la Home (index.html, donde existe #hero).
+    // En las subpáginas se oculta el canvas y no se inicializa nada para
+    // no gastar CPU/GPU (el rAF del fondo es lo que más pesa).
+    const esHome = document.getElementById('hero') !== null;
+    if (!esHome) {
+        canvas.style.display = 'none';
+        return;
+    }
+
     const ctx = canvas.getContext('2d');
     let W, H;
     let mouseX = 0, mouseY = 0;

@@ -6,6 +6,11 @@
     <title>XUR | Estudio Diagonal 2026</title>
     <meta name="description" content="Estudio Diagonal XUR - Diseñamos experiencias inmersivas que integran arte, tecnología y luz.">
     <link rel="stylesheet" href="style.css">
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <!-- Canvas de Partículas -->
@@ -28,8 +33,7 @@
             <a href="#servicios-detail" data-i18n="nav-portfolio">Portfolio</a>
             <a href="#catalogo" data-i18n="catalog-title">Catálogo</a>
             <a href="#workshops" data-i18n="nav-workshops">WORKSHOPS</a>
-            <a href="#presupuesto" data-i18n="nav-budget">CONTACTANOS</a>
-            <a href="#contacto" data-i18n="nav-contact">REDES</a>
+            <a href="#contacto" data-i18n="nav-contact">CONTACTO</a>
             <button id="lang-btn" class="lang-btn">EN</button>
         </div>
     </nav>
@@ -37,6 +41,10 @@
     <!-- HERO -->
     <header class="hero" id="hero">
         <div class="hero-overlay"></div>
+        <!-- Grafismos decorativos -->
+        <img src="assets/grafismos/diagonal logos-elementos blanco-05.png" class="grafismo grafismo-hero-tl" alt="" aria-hidden="true">
+        <img src="assets/grafismos/diagonal logos-elementos blanco-08.png" class="grafismo grafismo-hero-br" alt="" aria-hidden="true">
+        <img src="assets/grafismos/diagonal logos-elementos blanco-10.png" class="grafismo grafismo-hero-ruler" alt="" aria-hidden="true">
         <div class="hero-hud top-left">
             <span class="hud-label">GPS: -34.6111</span>
             <span class="hud-label">Lo: -58.3795</span>
@@ -46,7 +54,7 @@
         </div>
         <div class="hero-center">
             <span class="hero-subtitle" data-i18n="hero-subtitle">DIGITAL ART STUDIO</span>
-            <img src="/assets/imagotipo-xur-blaco.png" alt="XUR Logo" class="hero-logo">
+            <img src="assets/logos-xur-blanco-02.svg" alt="XUR Logo" class="hero-logo">
             <p class="hero-tagline" data-i18n="hero-tagline">EXPLORING BEYOND DIMENSIONS</p>
             <a href="#quienes-somos" class="cta-btn" data-i18n="hero-cta">VER PROYECTOS »</a>
         </div>
@@ -60,7 +68,8 @@
     </header>
 
     <!-- 01. QUIENES SOMOS -->
-    <section id="quienes-somos" class="reveal">
+    <section id="quienes-somos" class="reveal" style="position:relative; overflow:hidden;">
+        <img src="assets/grafismos/diagonal logos-elementos blanco-06.png" class="grafismo grafismo-section-tr" alt="" aria-hidden="true">
         <div class="section-header">
             <span class="section-num">01.</span>
             <h2 data-i18n="team-title">Quiénes somos</h2>
@@ -76,25 +85,23 @@
                 <div class="card-glow"></div>
                 <h3>Facundo Marrazzo</h3>
                 <span class="role">effe.cinco</span>
-                <p data-i18n="team-member-1">Artista visual / VJ especializado en arte generativo y experiencias interactivas. Experiencia en sistemas de interacción, tracking corporal, procesamiento espacial y visuales generativos aplicados a escena.</p>
             </div>
             <div class="team-card">
                 <div class="card-glow"></div>
                 <h3>Julieta Ver</h3>
                 <span class="role">Julie Vtt</span>
-                <p data-i18n="team-member-2">Diseñadora industrial y productora audiovisual con foco en realización, animación y producción técnica. Amplia experiencia en gestión y coordinación de proyectos de gran escala.</p>
             </div>
             <div class="team-card">
                 <div class="card-glow"></div>
                 <h3>Manuel Benavidez</h3>
                 <span class="role">Manuu_raw</span>
-                <p data-i18n="team-member-3">Artista multimedia y técnico audiovisual especializado en la integración y sincronización de sistemas de luz, video y sonido.</p>
             </div>
         </div>
     </section>
 
     <!-- 02. QUÉ HACEMOS -->
-    <section id="que-hacemos" class="reveal">
+    <section id="que-hacemos" class="reveal" style="position:relative; overflow:hidden;">
+        <img src="assets/grafismos/diagonal logos-elementos blanco-07.png" class="grafismo grafismo-section-bl" alt="" aria-hidden="true">
         <div class="section-header">
             <span class="section-num">02.</span>
             <h2 data-i18n="what-title">Qué hacemos</h2>
@@ -123,7 +130,8 @@
     </section>
 
     <!-- 03. SERVICIOS (BENTO GRID) -->
-    <section id="servicios-detail" class="reveal">
+    <section id="servicios-detail" class="reveal" style="position:relative; overflow:hidden;">
+        <img src="assets/grafismos/diagonal logos-elementos blanco-05.png" class="grafismo grafismo-section-tr" alt="" aria-hidden="true">
         <div class="section-header">
             <span class="section-num">03.</span>
             <h2 data-i18n="services-title">Servicios</h2>
@@ -286,139 +294,256 @@
             }
         </style>
         <div class="bento-workshops">
-            <!-- Workshop 1 (Largo) -->
-            <div class="team-card bento-long" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(255,255,255,0.1);">
-                <div class="card-glow"></div>
-                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg'); opacity: 0.25;"></div>
-                
-                <div style="position: relative; z-index: 1;">
-                    <span class="bento-tag" style="margin-bottom: 0.8rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
-                    <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
-                    <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
-                        <strong>Fechas:</strong> Miércoles 19/08 y Jueves 20/08<br>
-                        <strong>Duración:</strong> 2 días (4hs por jornada)<br>
-                        <strong>Lugar:</strong> DIAGONAL XUR
-                    </p>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Exploración de herramientas digitales para el diseño de experiencias interactivas y entornos inmersivos.</p>
-                </div>
-                
-                <div style="position: relative; z-index: 1;">
-                    <button onclick="document.getElementById('workshop-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="width: 100%; margin-bottom: 0.8rem; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: white;">VER INFORMACIÓN Y TEMARIO</button>
 
-                    <div style="display: flex; gap: 0.5rem;">
-                        <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER%3A%20LABORATORIO%20INMERSIVO%20%28Mi%C3%A9rcoles%2019%2F08%20y%20Jueves%2020%2F08%2C%20en%20DIAGONAL%20XUR%29." target="_blank" class="cta-btn" style="flex: 1; text-align: center; padding: 0.7rem; font-size: 0.8rem;">WhatsApp</a>
-                        <a href="mailto:hola.xur@gmail.com?subject=Reserva%20Workshop%20TouchDesigner&body=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER:%20LABORATORIO%20INMERSIVO%20(Miércoles%2019/08%20y%20Jueves%2020/08,%20en%20DIAGONAL%20XUR)." class="cta-btn" style="flex: 1; text-align: center; padding: 0.7rem; font-size: 0.8rem; background: transparent; border: 1px solid white; color: white;">Email</a>
+            <!-- Workshop 1 (Largo) — TD v2 -->
+            <div class="team-card bento-long" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(0,229,255,0.15);">
+                <div class="card-glow"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg'); opacity: 0.28;"></div>
+
+                <div style="position: relative; z-index: 1; padding: 1.5rem;">
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.5); color: #00e5ff; background: rgba(0,229,255,0.07);">PRESENCIAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(168,85,247,0.07);">VIRTUAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">V2 — NUEVA EDICIÓN</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Presencial: 15 cupos</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Virtual: hasta 30</span>
+                    </div>
+                    <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
+                        <strong>Fechas:</strong> Lunes 22/09 · 29/09 · 06/10<br>
+                        <strong>Horario:</strong> 18:00 a 21:00 hs (3hs por jornada)<br>
+                        <strong>Lugar:</strong> DIAGONAL XUR / Online
+                    </p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">De la interfaz de nodos al control de luces reales: audioreactividad, mapping, DMX y Pixel LED desde TouchDesigner.</p>
+                </div>
+
+                <div style="position: relative; z-index: 1; padding: 0 1.5rem 1.5rem 1.5rem;">
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.8rem;">
+                        <button onclick="document.getElementById('workshop-td2-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: white;">VER DETALLES Y TEMARIO</button>
+                        <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="padding: 0.8rem 1.2rem; background: var(--accent); color: var(--bg); font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(0,229,255,0.3);">
+                            COMPRAR
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Workshop 2 (Corto) -->
+            <!-- Workshop 2 (Corto/Bento) — FUNDAMENTOS LÁSER PARA SHOWS -->
+            <div class="team-card bento-short" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(255,0,85,0.25);">
+                <div class="card-glow" style="background: radial-gradient(circle at center, rgba(255,0,85,0.15) 0%, transparent 70%);"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion laser/IMG-20260213-WA0054-min.jpeg'); opacity: 0.35;"></div>
+
+                <div style="position: relative; z-index: 1; padding: 1.5rem;">
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,0,85,0.5); color: #ff0055; background: rgba(255,0,85,0.08);">PRESENCIAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">NUEVO</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">FUNDAMENTOS LÁSER<br>PARA SHOWS</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Presencial: 10 cupos</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,0,85,0.4); color: #ff0055;">$150.000</span>
+                    </div>
+                    <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
+                        <strong>Fechas:</strong> 06/10 y 07/10 (2 jornadas)<br>
+                        <strong>Horario:</strong> 18:00 a 21:00 hs<br>
+                        <strong>Docente:</strong> José Cerineo
+                    </p>
+                </div>
+
+                <div style="position: relative; z-index: 1; padding: 0 1.5rem 1.5rem 1.5rem;">
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.8rem;">
+                        <button onclick="document.getElementById('workshop-laser-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: white;">VER DETALLES Y TEMARIO</button>
+                        <button onclick="abrirInscripcion('presencial', 'laser');" class="cta-btn" style="padding: 0.8rem 1.2rem; background: #ff0055; color: white; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(255,0,85,0.4);">
+                            COMPRAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 3 (Corto) — PRÓXIMAMENTE -->
             <div class="team-card bento-short bento-prox">
                 <div class="card-glow"></div>
-                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg');"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DSC09641-min.jpg');"></div>
                 <div class="bento-prox-content">
-                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <span style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
                     <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
                     <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
                 </div>
             </div>
 
-            <!-- Workshop 3 (Corto) -->
-            <div class="team-card bento-short bento-prox">
-                <div class="card-glow"></div>
-                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DSC09641-min.jpg');"></div>
-                <div class="bento-prox-content">
-                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
-                    <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
-                    <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
-                </div>
-            </div>
-
-            <!-- Workshop 4 (Largo) -->
+            <!-- Workshop 4 (Largo) — PRÓXIMAMENTE -->
             <div class="team-card bento-long bento-prox">
                 <div class="card-glow"></div>
-                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/DSC09718-min.jpg');"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg');"></div>
                 <div class="bento-prox-content">
-                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <span style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
                     <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
                     <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Modal Workshop -->
-    <div id="workshop-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 99999; backdrop-filter: blur(10px); justify-content: center; align-items: center; padding: 1rem;">
-        <div style="background: rgba(12,12,30,0.95); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; max-width: 1040px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-            <button onclick="document.getElementById('workshop-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
-                <!-- Columna Izquierda: Info + Media -->
+    <!-- Modal Workshop TD v2 -->
+    <div id="workshop-td2-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.88); z-index: 99999; backdrop-filter: blur(12px); justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: rgba(10,10,28,0.97); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; max-width: 1100px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.6);">
+            <button onclick="document.getElementById('workshop-td2-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+
+                <!-- Columna Izquierda: Info + Docentes + Galería + Mapa -->
                 <div>
-                    <span class="bento-tag" style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.5); color: #00e5ff; background: rgba(0,229,255,0.07);">PRESENCIAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(168,85,247,0.07);">VIRTUAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">V2 — NUEVA EDICIÓN</span>
+                    </div>
                     <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white; font-weight: 800; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
                     <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
-                        <strong>Fechas:</strong> Miércoles 19/08 y Jueves 20/08<br>
-                        <strong>Duración:</strong> 2 días (4hs por jornada)<br>
-                        <strong>Lugar:</strong> DIAGONAL XUR
+                        <strong>Fechas:</strong> Lunes 22/09 · 29/09 · 06/10<br>
+                        <strong>Horario:</strong> 18:00 a 21:00 hs (3hs por jornada)<br>
+                        <strong>Lugar:</strong> DIAGONAL XUR / Online<br>
+                        <strong>Cupos presencial:</strong> 15 · <strong>Cupos virtual:</strong> hasta 30
                     </p>
-                    
-                    <div style="font-size: 1rem; color: #ddd; line-height: 1.6; margin-bottom: 2rem;">
-                        <p style="margin-bottom: 1rem;">Abrimos las puertas de nuestro laboratorio. Anunciamos una nueva edición del Workshop presencial de TouchDesigner.</p>
-                        <p style="margin-bottom: 1rem;">
-@EFFE.cinco (Facundo Marrazzo) se desempeña como VJ y Artista visual, especializado en arte generativo y en la creación de experiencias audiovisuales interactivas. Su enfoque se centra en explorar nuevos medios y la tecnología, experimentando con materiales fluidos audio‑reactivos y objetos 3D filosos y refractivos generados en tiempo real. Utiliza herramientas como TouchDesigner, Fotogrametria, Stable Diffusion, Depence, Madmapper, Ableton Live y Kinect, así como otros sensores, para intervenir los espacios y hacerlos interactivos. Además, será la persona que dictará el workshop. <a href="https://www.instagram.com/effe.cinco/" target="_blank" style="color: #00ffff; text-decoration: underline;">@effe.cinco</a>
-</p>
-                        <p style="margin-bottom: 1rem;">En <a href="https://distorxion.com.ar" target="_blank" style="color: #00ffff; text-decoration: underline;">Distorxionn</a> creemos en la exploración constante de nuevas formas de integrar tecnología y creatividad. Cada proyecto es un laboratorio donde experimentamos con técnicas innovadoras, transformando espacios en experiencias que conectan emociones y entorno.</p>
+
+                    <!-- DESCRIPCIÓN DE DOCENTES (EN EL MISMO COLOR) -->
+                    <div style="font-size: 0.92rem; color: #ddd; line-height: 1.6; margin-bottom: 2rem;">
+                        <p style="margin-bottom: 1.2rem; color: #bbb;">
+                            Segunda edición del Workshop presencial + virtual de TouchDesigner. Abrimos las puertas de nuestro laboratorio para explorar nuevas fronteras: además de los pilares de la primera edición, esta vez incorporamos control DMX y Pixel LED desde TouchDesigner.
+                        </p>
+
+                        <!-- Docente 1: EFFE.CINCO -->
+                        <div style="background: rgba(0,229,255,0.04); border-left: 3px solid #00e5ff; padding: 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1.2rem;">
+                            <div style="font-weight: bold; color: #00e5ff; margin-bottom: 0.3rem; font-size: 0.95rem;">
+                                EFFE.CINCO — <a href="https://www.instagram.com/effe.cinco/" target="_blank" style="color: #00e5ff; text-decoration: underline;">@effe.cinco</a>
+                            </div>
+                            <p style="color: #ccc; font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                Facundo Marrazzo se desempeña como VJ y Artista visual, especializado en arte generativo y en la creación de experiencias audiovisuales interactivas. Su enfoque se centra en explorar nuevos medios y la tecnología, experimentando con materiales fluidos audio-reactivos y objetos 3D filosos y refractivos generados en tiempo real. Utiliza herramientas como TouchDesigner, Fotogrametria, Stable Diffusion, Depence, Madmapper, Ableton Live y Kinect, así como otros sensores, para intervenir los espacios y hacerlos interactivos.
+                            </p>
+                        </div>
+
+                        <!-- Docente 2: MANUU_RAW -->
+                        <div style="background: rgba(0,229,255,0.04); border-left: 3px solid #00e5ff; padding: 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1.2rem;">
+                            <div style="font-weight: bold; color: #00e5ff; margin-bottom: 0.3rem; font-size: 0.95rem;">
+                                MANUU_RAW — <a href="https://www.instagram.com/manuu_raw/" target="_blank" style="color: #00e5ff; text-decoration: underline;">@manuu_raw</a>
+                            </div>
+                            <p style="color: #ccc; font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                Manuel Benavidez también conocido como Manu Raw es artista multimedia, Vj y técnico audiovisual. Su enfoque artístico se basa en el uso innovador del programa TouchDesigner, tanto como recurso estético como herramienta fundamental para la creación de sus obras y para la sincronización de elementos visuales y lummnicos. Su área de interés abarca el diseño, iluminación y técnica de shows y presentaciones artísticas, destacándose por su habilidad para fusionar estos elementos de manera creativa.
+                            </p>
+                        </div>
+
+                        <p style="font-size: 0.85rem; color: #888; font-style: italic;">
+                            En <a href="https://distorxion.com.ar" target="_blank" style="color: #00ffff; text-decoration: underline;">Distorxion</a> creemos en la exploración constante de nuevas formas de integrar tecnología y creatividad.
+                        </p>
                     </div>
 
-                    <video src="/assets/Material_workshop/MM5_F_1-min.mp4" autoplay loop muted playsinline style="width: 100%; border-radius: 8px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1);"></video>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 2rem;">
-                        <img src="/assets/Material_workshop/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg" style="width: 100%; border-radius: 6px; aspect-ratio: 16/9; object-fit: cover;">
-                        <img src="/assets/Material_workshop/DSC09718-min.jpg" style="width: 100%; border-radius: 6px; aspect-ratio: 16/9; object-fit: cover;">
+                    <!-- GALERÍA INTERACTIVA (VISOR GRANDE + TIRA DE MINIATURAS HORIZONTAL) -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: white; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.8rem;">Galería de Referencia</h4>
+                        
+                        <!-- VISOR PRINCIPAL GRANDE (MINIMALISTA) -->
+                        <div id="galeria-main-viewer" style="position: relative; width: 100%; height: 380px; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,229,255,0.25); box-shadow: 0 0 30px rgba(0,0,0,0.8); margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center;">
+                            <video id="galeria-main-video" src="/assets/Material_workshop/workshop Touchdesigner/MM5_F_1-min.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="this.paused ? this.play() : this.pause();"></video>
+                            <img id="galeria-main-img" src="" alt="Referencia" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- TIRA DE MINIATURAS HORIZONTAL -->
+                        <div id="galeria-thumb-track" style="display: flex; gap: 0.6rem; overflow-x: auto; padding: 0.4rem 0.2rem; scrollbar-width: thin; scrollbar-color: #00e5ff rgba(255,255,255,0.05); -webkit-overflow-scrolling: touch;">
+                            
+                            <!-- Thumbnail Videos -->
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('video', '/assets/Material_workshop/workshop Touchdesigner/MM5_F_1-min.mp4', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 2px solid #00e5ff; opacity: 1; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/workshop Touchdesigner/MM5_F_1-min.mp4" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #00e5ff; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('video', '/assets/Material_workshop/workshop Touchdesigner/primervideo.mp4', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/workshop Touchdesigner/primervideo.mp4" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #00e5ff; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('video', '/assets/Material_workshop/workshop Touchdesigner/MM3-min.mp4', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/workshop Touchdesigner/MM3-min.mp4" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #00e5ff; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('video', '/assets/Material_workshop/workshop Touchdesigner/20260220_184633-min.mp4', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/workshop Touchdesigner/20260220_184633-min.mp4" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #00e5ff; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+
+                            <!-- Thumbnail Fotos -->
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg" alt="Mutek performance" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg" alt="Mutek setup" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/MELLINO-07063-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/MELLINO-07063-min.jpg" alt="Mellino live" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/DSC09641-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DSC09641-min.jpg" alt="Workshop lab" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg" alt="Setup TouchDesigner" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/DSC09796-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DSC09796-min.jpg" alt="Láser y luces" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-thumb-item" onclick="setGaleriaMain('image', '/assets/Material_workshop/workshop Touchdesigner/IMG_0417.png', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/IMG_0417.png" alt="Instalación táctil" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-size: 1.3rem; font-weight: bold; color: white;">Valor del Workshop: $150.000</span>
+                    <!-- MAPA UBICACIÓN DEL ESTUDIO -->
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                        Ubicación del Estudio
+                    </h4>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 0.8rem;">
+                        Av. Presidente Julio A. Roca 672, CABA · Monserrat, Buenos Aires
+                    </p>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); position: relative;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.692429427387!2d-58.37894212347313!3d-34.61192805793096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad2bf23e99d%3A0xb35a720e1dd20b8!2sAv.%20Pres.%20Diagonal%20Sur%20Julio%20Argentino%20Roca%20672%2C%20C1067%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" width="100%" height="200" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER%3A%20LABORATORIO%20INMERSIVO%20%28Mi%C3%A9rcoles%2019%2F08%20y%20Jueves%2020%2F08%2C%20en%20DIAGONAL%20XUR%29." target="_blank" class="cta-btn" style="flex: 1; min-width: 150px; text-align: center; padding: 1rem; font-size: 0.95rem;">Reservar por WhatsApp</a>
-                        <a href="mailto:hola.xur@gmail.com?subject=Reserva%20Workshop%20TouchDesigner&body=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20workshop%20TOUCHDESIGNER:%20LABORATORIO%20INMERSIVO%20(Miércoles%2019/08%20y%20Jueves%2020/08,%20en%20DIAGONAL%20XUR)." class="cta-btn" style="flex: 1; min-width: 150px; text-align: center; padding: 1rem; font-size: 0.95rem; background: transparent; border: 1px solid white; color: white;">Reservar por Email</a>
-                    </div>
                 </div>
-                
-                <!-- Columna Derecha: Temario -->
+
+                <!-- Columna Derecha: Temario + Reserva (Abajo) -->
                 <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.4rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;">Temario Detallado</h4>
-                    
-                    <div style="margin-bottom: 2.5rem; font-size: 0.95rem; color: #ddd;">
+                    <!-- TEMARIO DETALLADO -->
+                    <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Temario Detallado
+                    </h4>
+
+                    <div style="font-size: 0.95rem; color: #ddd;">
                         <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 1: Introducción al Entorno de TouchDesigner</h5>
                         <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
-                            <li style="margin-bottom: 0.4rem;"><strong>1.1. Primeros Pasos y Organización:</strong> Entorno visual basado en nodos, buenas prácticas, uso de Containers/Bases, Nulls y colores.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.1. Primeros Pasos y Organización:</strong> Entorno visual basado en nodos, buenas prácticas, Containers/Bases, Nulls y colores.</li>
                             <li style="margin-bottom: 0.4rem;"><strong>1.2. Usos de TD:</strong> Generación en tiempo real, automatización, sensores, videomapping y sincronización láser.</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>1.3. Generación de Video:</strong> Operadores TOP, composición 2D, creación de geometría 3D, Instancing (técnica GPU), Pointclouds y Shaders.</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>1.4. Sincronizaciones y UI:</strong> Audio FFT, MIDI/OSC, Timecode, y creación de interfaces gráficas.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.3. Generación de Video:</strong> Operadores TOP, composición 2D, geometría 3D, Instancing (GPU), Pointclouds y Shaders.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.4. Sincronizaciones y UI:</strong> Audio FFT, MIDI/OSC, Timecode, interfaces gráficas.</li>
                             <li style="margin-bottom: 0.4rem;"><strong>1.5. Familias de Operadores:</strong> COMP, TOP, CHOP, SOP, MAT, DAT.</li>
                             <li style="margin-bottom: 0.4rem;"><strong>1.6. Recursos Clave:</strong> OP Snippets, Wiki y Foros de Derivative.</li>
                         </ul>
 
                         <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 2: Audioreactividad</h5>
                         <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
-                            <li style="margin-bottom: 0.4rem;"><strong>2.1. Análisis de Señal:</strong> Captura, Transformada de Fourier (FFT), aislamiento de frecuencias, suavizado (Lag/Filter) y mapeo (Math).</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>2.2. Ejemplos de Ajustes:</strong> Control audioreactivo de visuales 2D y 3D.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>2.1. Análisis de Señal:</strong> Captura, FFT, aislamiento de frecuencias, suavizado (Lag/Filter) y mapeo (Math).</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>2.2. Ajustes en vivo:</strong> Control audioreactivo de visuales 2D y 3D.</li>
                         </ul>
 
                         <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 3: TouchDesigner + Resolume (VJ Workflow)</h5>
                         <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
-                            <li style="margin-bottom: 0.4rem;"><strong>3.1. Protocolos de Envío:</strong> Uso de Spout/Syphon para latencia cero y NDI para red local.</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>3.2. Control MIDI:</strong> Manipulación de parámetros en vivo desde un controlador externo.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>3.1. Protocolos de Envío:</strong> Spout/Syphon para latencia cero y NDI para red local.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>3.2. Control MIDI:</strong> Manipulación de parámetros en vivo desde controlador externo.</li>
                         </ul>
 
                         <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 4: Interactividad y Tracking</h5>
                         <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
                             <li style="margin-bottom: 0.4rem;"><strong>4.1. Hardware Dedicado:</strong> Introducción a Kinect.</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>4.2. MediaPipe:</strong> Machine Learning de Google para tracking de cuerpo (Pose), rostro (Face Mesh) y manos usando solo webcam.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>4.2. MediaPipe:</strong> ML de Google para tracking de cuerpo (Pose), rostro (Face Mesh) y manos con webcam.</li>
                         </ul>
 
                         <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 5: Optimización y Workflows en Vivo</h5>
@@ -426,183 +551,565 @@
                             <li style="margin-bottom: 0.4rem;"><strong>5.1. Desglose de Show Real:</strong> UI, Switch TOP, carga asíncrona y Monitor de Rendimiento (Perform CHOP).</li>
                             <li style="margin-bottom: 0.4rem;"><strong>5.2. Práctica Final (JAM):</strong> Experimento colaborativo enviando visuales vía NDI hacia un servidor central.</li>
                         </ul>
+
+                        <h5 style="color: #00e5ff; font-size: 1.05rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="background: rgba(0,229,255,0.15); border: 1px solid rgba(0,229,255,0.3); border-radius: 4px; padding: 0.1rem 0.4rem; font-size: 0.7rem; letter-spacing: 2px;">NUEVO</span>
+                            Bloque 6: Control DMX y Pixel LED desde TouchDesigner
+                        </h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>6.1. Protocolo DMX / ArtNet:</strong> Qué es DMX, universos, canales y cómo enviar señal desde TD con el CHOP DMX Out y ArtNet.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>6.2. Control de Iluminación en vivo:</strong> Integración con fixtures, moving heads y dimmers: mapeo de parámetros TD → DMX en tiempo real.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>6.3. Pixel LED (LED Mapping):</strong> Protocolos sACN / KiNet, universos múltiples y output a tiras y matrices de Pixel LED.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>6.4. Audioreactividad sobre luces:</strong> Llevar el análisis FFT al control de colores, intensidades y efectos sobre fixtures DMX y Pixel LED.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>6.5. Proyecto integrador:</strong> Show sincronizado de visuales + luces controlado desde un único patch de TouchDesigner.</li>
+                        </ul>
+                    </div>
+
+                    <!-- RECUADRO DE INSCRIPCIÓN & RESERVA (ABAJO DEL TEMARIO) -->
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(0,229,255,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                            Inscripción & Reserva de Lugar
+                        </h4>
+
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Opción Presencial -->
+                            <div style="background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.3); border-radius: 8px; padding: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                    <div>
+                                        <span style="font-weight: bold; color: #00e5ff; font-size: 0.95rem;">MODALIDAD PRESENCIAL</span>
+                                        <span style="display: block; font-size: 0.75rem; color: #aaa;">15 cupos en el laboratorio</span>
+                                    </div>
+                                    <span style="font-size: 1.3rem; font-weight: 900; color: white;">$180.000</span>
+                                </div>
+                                <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
+                                    RESERVAR PRESENCIAL
+                                </button>
+                            </div>
+
+                            <!-- Opción Virtual -->
+                            <div style="background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.3); border-radius: 8px; padding: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                    <div>
+                                        <span style="font-weight: bold; color: #00e5ff; font-size: 0.95rem;">MODALIDAD VIRTUAL</span>
+                                        <span style="display: block; font-size: 0.75rem; color: #aaa;">Hasta 30 cupos en vivo / grabado</span>
+                                    </div>
+                                    <span style="font-size: 1.3rem; font-weight: 900; color: white;">$75.000</span>
+                                </div>
+                                <button onclick="abrirInscripcion('virtual');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
+                                    RESERVAR VIRTUAL
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONSULTAS POR WHATSAPP / EMAIL -->
+                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <p style="font-size: 0.8rem; color: #888; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 1px;">¿Tenés consultas?</p>
+                        <div style="display: flex; gap: 0.6rem;">
+                            <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Tengo%20una%20consulta%20sobre%20el%20workshop%20TOUCHDESIGNER%20v2%3A%20LABORATORIO%20INMERSIVO." target="_blank" class="cta-btn" style="flex: 1; text-align: center; padding: 0.75rem; font-size: 0.82rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:hola.xur@gmail.com?subject=Consulta%20Workshop%20TouchDesigner%20v2" class="cta-btn" style="flex: 1; text-align: center; padding: 0.75rem; font-size: 0.82rem; background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #ccc; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                Email
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 
-    <!-- 06. PRESUPUESTO -->
-    <section id="presupuesto" class="reveal">
-        <div class="section-header">
-            <span class="section-num">06.</span>
-            <h2 data-i18n="budget-title">Contactanos</h2>
+    <!-- Modal Workshop Fundamentos Láser para Shows -->
+    <div id="workshop-laser-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.88); z-index: 99999; backdrop-filter: blur(12px); justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: rgba(10,10,28,0.97); border: 1px solid rgba(255,0,85,0.3); border-radius: 14px; max-width: 1100px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.7);">
+            <button onclick="document.getElementById('workshop-laser-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
+
+            <!-- Grid 2 Columnas -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+                
+                <!-- Columna Izquierda: Info + Docente + Galería Laser + Mapa -->
+                <div>
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,0,85,0.5); color: #ff0055; background: rgba(255,0,85,0.08);">PRESENCIAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">NUEVO WORKSHOP</span>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white; font-weight: 800; line-height: 1.2;">FUNDAMENTOS LÁSER<br>PARA SHOWS</h3>
+                    <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                        <strong>Fechas:</strong> Lunes 06/10 y Martes 07/10 (2 jornadas)<br>
+                        <strong>Horario:</strong> 18:00 a 21:00 hs (3hs por jornada)<br>
+                        <strong>Lugar:</strong> DIAGONAL XUR<br>
+                        <strong>Cupos presenciales:</strong> 10
+                    </p>
+
+                    <!-- DESCRIPCIÓN Y DOCENTE -->
+                    <div style="font-size: 0.92rem; color: #ddd; line-height: 1.6; margin-bottom: 2rem;">
+                        <p style="margin-bottom: 1.2rem; color: #bbb;">
+                            Capacitación intensiva en el laboratorio inmersivo de DIAGONAL XUR para aprender a operar y programar proyectores láser en espectáculos en vivo. Desde la configuración de redes, interfaces FB3/FB4 y software de control hasta la calibración de zonas de proyección y seguridad.
+                        </p>
+
+                        <!-- Docente: José Cerineo -->
+                        <div style="background: rgba(255,0,85,0.05); border-left: 3px solid #ff0055; padding: 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1.2rem;">
+                            <div style="font-weight: bold; color: #ff0055; margin-bottom: 0.3rem; font-size: 0.95rem;">
+                                JOSÉ CERINEO — <a href="https://www.instagram.com/josecerineo/" target="_blank" style="color: #ff0055; text-decoration: underline;">@josecerineo</a>
+                            </div>
+                            <p style="color: #ccc; font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                Especialista en diseño, programación y control de sistemas láser para espectáculos, festivales y eventos multimedia. Con amplia trayectoria en operación de proyectores láser, hardware FB3/FB4, software Pangolin BEYOND y protocolos de red aplicados al show control de alta escala.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- GALERÍA INTERACTIVA LÁSER -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: white; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.8rem;">Galería de Referencia Láser</h4>
+                        
+                        <!-- VISOR PRINCIPAL GRANDE -->
+                        <div id="galeria-laser-main-viewer" style="position: relative; width: 100%; height: 380px; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,0,85,0.3); box-shadow: 0 0 30px rgba(0,0,0,0.8); margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center;">
+                            <video id="galeria-laser-main-video" src="/assets/Material_workshop/seleccion laser/IMG_8918-min.MOV" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="this.paused ? this.play() : this.pause();"></video>
+                            <img id="galeria-laser-main-img" src="" alt="Referencia Laser" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- TIRA DE MINIATURAS HORIZONTAL -->
+                        <div id="galeria-laser-thumb-track" style="display: flex; gap: 0.6rem; overflow-x: auto; padding: 0.4rem 0.2rem; scrollbar-width: thin; scrollbar-color: #ff0055 rgba(255,255,255,0.05); -webkit-overflow-scrolling: touch;">
+                            
+                            <!-- Videos -->
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('video', '/assets/Material_workshop/seleccion laser/IMG_8918-min.MOV', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 2px solid #ff0055; opacity: 1; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/seleccion laser/IMG_8918-min.MOV" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #ff0055; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('video', '/assets/Material_workshop/seleccion laser/IMG_8919-min.MOV', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/seleccion laser/IMG_8919-min.MOV" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #ff0055; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('video', '/assets/Material_workshop/seleccion laser/IMG_9957-min.MOV', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/seleccion laser/IMG_9957-min.MOV" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #ff0055; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('video', '/assets/Material_workshop/seleccion laser/primervideo.mp4', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; background: #000; transition: all 0.2s;">
+                                <video src="/assets/Material_workshop/seleccion laser/primervideo.mp4" muted style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
+                                <span style="position: absolute; bottom: 3px; right: 4px; font-size: 0.6rem; background: rgba(0,0,0,0.7); color: #ff0055; padding: 1px 3px; border-radius: 3px;">▶ VIDEO</span>
+                            </div>
+
+                            <!-- Fotos -->
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('image', '/assets/Material_workshop/seleccion laser/IMG-20251129-WA0035-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/seleccion laser/IMG-20251129-WA0035-min.jpg" alt="Laser show" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('image', '/assets/Material_workshop/seleccion laser/IMG-20260213-WA0054-min.jpeg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/seleccion laser/IMG-20260213-WA0054-min.jpeg" alt="Laser setup" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('image', '/assets/Material_workshop/seleccion laser/IMG_0417.png', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/seleccion laser/IMG_0417.png" alt="Laser visuals" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-laser-thumb-item" onclick="setGaleriaLaserMain('image', '/assets/Material_workshop/seleccion laser/IMG_20251031_231512-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/seleccion laser/IMG_20251031_231512-min.jpg" alt="Laser stage" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- MAPA UBICACIÓN DEL ESTUDIO -->
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                        Ubicación del Estudio
+                    </h4>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 0.8rem;">
+                        Av. Presidente Julio A. Roca 672, CABA · Monserrat, Buenos Aires
+                    </p>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); position: relative;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.692429427387!2d-58.37894212347313!3d-34.61192805793096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad2bf23e99d%3A0xb35a720e1dd20b8!2sAv.%20Pres.%20Diagonal%20Sur%20Julio%20Argentino%20Roca%20672%2C%20C1067%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" width="100%" height="200" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+
+                <!-- Columna Derecha: Temario + Reserva -->
+                <div>
+                    <!-- TEMARIO DETALLADO LÁSER -->
+                    <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Temario Detallado
+                    </h4>
+
+                    <div style="font-size: 0.95rem; color: #ddd;">
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 1: Redes y Hardware de Control</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>1.1. Dispositivos de Control:</strong> Controladores FB3 y FB4, Ethernet Cat6a y Fibra Óptica para espectáculos.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.2. Redes para Láseres:</strong> Configuración DHCP vs IP Estática, protocolos ArtNet, sACN y OSC.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.3. Ajustes de PC:</strong> Especificaciones de hardware y optimización del SO para baja latencia.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 2: Calibración y Salida Láser</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>2.1. Parámetros de Escaneo:</strong> Velocidad (Kpps), tamaño de imagen, mapas de atenuación (BAM).</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>2.2. Seguridad y Zonas de Proyección:</strong> Mapeo seguro, corrección geométrica y prevención de exposición directa al público.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 3: Flujo de Contenido y Software</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>3.1. Software de Control:</strong> Operación en Pangolin BEYOND y QuickShow.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>3.2. Simulación en Vivo:</strong> Previsualización de espectáculos con Emulaser sin proyectores físicos.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 4: Creación de Efectos y Sincronización</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>4.1. Animaciones y Vectorial:</strong> Creación e importación de contenido gráfico y patrones.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>4.2. Sincronización Multimedia:</strong> Programación de secuencias con audio, timecode y consolas DMX.</li>
+                        </ul>
+
+                        <h5 style="color: #ff0055; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 5: Diagnóstico y Práctica en Vivo (JAM)</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>5.1. Troubleshooting:</strong> Monitoreo de señal, carga de sistema y resolución de problemas en vivo.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>5.2. Práctica Final:</strong> Montaje y prueba de show sincronizado con proyectores láser en el estudio.</li>
+                        </ul>
+                    </div>
+
+                    <!-- RECUADRO DE INSCRIPCIÓN & RESERVA LÁSER -->
+                    <div style="background: rgba(255,0,85,0.04); border: 1px solid rgba(255,0,85,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                            Inscripción & Reserva de Lugar
+                        </h4>
+
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Opción Presencial -->
+                            <div style="background: rgba(255,0,85,0.08); border: 1px solid rgba(255,0,85,0.3); border-radius: 8px; padding: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                    <div>
+                                        <span style="font-weight: bold; color: #ff0055; font-size: 0.95rem;">MODALIDAD PRESENCIAL</span>
+                                        <span style="display: block; font-size: 0.75rem; color: #aaa;">10 cupos en el laboratorio</span>
+                                    </div>
+                                    <span style="font-size: 1.3rem; font-weight: 900; color: white;">$150.000</span>
+                                </div>
+                                <button onclick="abrirInscripcion('presencial', 'laser');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: #ff0055; color: white; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(255,0,85,0.3);">
+                                    RESERVAR PRESENCIAL
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONSULTAS POR WHATSAPP / EMAIL -->
+                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <p style="font-size: 0.8rem; color: #888; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 1px;">¿Tenés consultas?</p>
+                        <div style="display: flex; gap: 0.6rem;">
+                            <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Tengo%20una%20consulta%20sobre%20el%20workshop%20FUNDAMENTOS%20L%C3%81SER%20PARA%20SHOWS." target="_blank" class="cta-btn" style="flex: 1; text-align: center; padding: 0.75rem; font-size: 0.82rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:hola.xur@gmail.com?subject=Consulta%20Workshop%20Fundamentos%20Laser" class="cta-btn" style="flex: 1; text-align: center; padding: 0.75rem; font-size: 0.82rem; background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #ccc; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                Email
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+    </div>
+
+    <!-- MODAL FORMULARIO DE INSCRIPCIÓN -->
+    <div id="ws-inscripcion-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); z-index: 100000; backdrop-filter: blur(14px); justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: rgba(12,12,32,0.98); border: 1px solid rgba(0,229,255,0.3); border-radius: 14px; max-width: 540px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 2.2rem; position: relative; box-shadow: 0 0 50px rgba(0,229,255,0.15);">
+            <button onclick="document.getElementById('ws-inscripcion-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
+
+            <h3 style="font-size: 1.5rem; color: white; margin-bottom: 0.3rem; font-weight: 800; letter-spacing: 0.5px;">Inscripción Workshop TouchDesigner v2</h3>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 1.5rem; letter-spacing: 1px;">DIAGONAL XUR · LABORATORIO INMERSIVO</p>
+
+            <form id="form-inscripcion-ws" onsubmit="procesarInscripcionWhatsApp(event);" style="display: flex; flex-direction: column; gap: 1rem;">
+                
+                <!-- Selector de Modalidad -->
+                <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                    <label style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Modalidad de Inscripción *</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+                        <button type="button" id="mod-opt-presencial" onclick="setModalidadInscripcion('presencial')" style="padding: 0.8rem; border-radius: 6px; border: 1px solid var(--accent); background: rgba(0,229,255,0.12); color: white; cursor: pointer; font-family: var(--font-display); font-size: 0.82rem; font-weight: bold; transition: all 0.3s;">
+                            PRESENCIAL<br><span style="font-weight: normal; font-size: 0.75rem; color: #00e5ff;">$180.000</span>
+                        </button>
+                        <button type="button" id="mod-opt-virtual" onclick="setModalidadInscripcion('virtual')" style="padding: 0.8rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.03); color: #aaa; cursor: pointer; font-family: var(--font-display); font-size: 0.82rem; font-weight: bold; transition: all 0.3s;">
+                            VIRTUAL<br><span style="font-weight: normal; font-size: 0.75rem; color: #aaa;">$75.000</span>
+                        </button>
+                    </div>
+                    <input type="hidden" id="ins-modalidad" value="presencial">
+                </div>
+
+                <!-- Nombre completo -->
+                <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                    <label for="ins-nombre" style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Nombre y Apellido *</label>
+                    <input type="text" id="ins-nombre" placeholder="Ej: Juan Pérez" required style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.85rem; color: white; font-family: var(--font-display); font-size: 0.9rem; outline: none;">
+                </div>
+
+                <!-- Email -->
+                <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                    <label for="ins-email" style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Email *</label>
+                    <input type="email" id="ins-email" placeholder="vos@ejemplo.com" required style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.85rem; color: white; font-family: var(--font-display); font-size: 0.9rem; outline: none;">
+                </div>
+
+                <!-- DNI y Teléfono en paralelo -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                        <label for="ins-dni" style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">DNI *</label>
+                        <input type="text" id="ins-dni" placeholder="Sin puntos" required style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.85rem; color: white; font-family: var(--font-display); font-size: 0.9rem; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                        <label for="ins-tel" style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Teléfono *</label>
+                        <input type="tel" id="ins-tel" placeholder="11 2345 6789" required style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.85rem; color: white; font-family: var(--font-display); font-size: 0.9rem; outline: none;">
+                    </div>
+                </div>
+
+                <!-- Observaciones -->
+                <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                    <label for="ins-obs" style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Observaciones (opcional)</label>
+                    <textarea id="ins-obs" rows="2" placeholder="Experiencia previa, dudas o requisitos especiales..." style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 0.85rem; color: white; font-family: var(--font-display); font-size: 0.9rem; outline: none; resize: vertical;"></textarea>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <div style="display: flex; gap: 0.8rem;">
+                        <button type="button" onclick="procesarInscripcionWhatsApp();" class="cta-btn" style="flex: 1; text-align: center; padding: 0.95rem; font-size: 0.85rem; font-weight: bold; background: #25D366; color: black; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            WHATSAPP
+                        </button>
+                        <button type="button" onclick="procesarInscripcionEmail();" class="cta-btn" style="flex: 1; text-align: center; padding: 0.95rem; font-size: 0.85rem; font-weight: bold; background: transparent; border: 1px solid white; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            EMAIL
+                        </button>
+                    </div>
+
+                    <a id="ins-link-pago-directo" href="https://mpago.li/2GBLeA8" target="_blank" rel="noopener" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: transparent; border: 1px solid var(--accent); color: var(--accent); text-decoration: none;">
+                        PAGAR AHORA CON LINK
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+    // --- LÓGICA GALERÍA INTERACTIVA TD v2 ---
+    function setGaleriaMain(type, url, el) {
+        const videoEl = document.getElementById('galeria-main-video');
+        const imgEl = document.getElementById('galeria-main-img');
         
-        <p class="budget-intro" data-i18n="budget-intro">Contanos tu idea</p>
+        document.querySelectorAll('.galeria-thumb-item').forEach(item => {
+            item.style.border = '1px solid rgba(255,255,255,0.15)';
+            item.style.opacity = '0.6';
+        });
+        if (el) {
+            el.style.border = '2px solid #00e5ff';
+            el.style.opacity = '1';
+        }
 
-        <div class="budget-wizard" id="main-wizard" style="margin-top: 2rem;">
-            <div class="wizard-progress">
-                <span class="step-indicator" data-i18n="wiz-step-text">STEP <span id="current-step">01</span> / 05</span>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="wiz-progress"></div>
-                </div>
-            </div>
+        if (type === 'video') {
+            imgEl.style.display = 'none';
+            videoEl.style.display = 'block';
+            videoEl.src = url;
+            videoEl.play();
+        } else {
+            videoEl.pause();
+            videoEl.style.display = 'none';
+            imgEl.style.display = 'block';
+            imgEl.src = url;
+        }
+    }
 
-            <!-- STEP 1: Escala -->
-            <div class="wizard-step active" data-step="1">
-                <h3 data-i18n="wiz-step-1-title">ESCALA DEL PROYECTO</h3>
-                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-                    <button class="option-card" data-value="Club / Private">
-                        <span class="opt-icon">🎵</span>
-                        <strong data-i18n="wiz-opt-1-1">Club / Private</strong>
-                        <span data-i18n="wiz-opt-1-1-desc">Espacios íntimos o eventos privados.</span>
-                    </button>
-                    <button class="option-card" data-value="Corporativo">
-                        <span class="opt-icon">🏢</span>
-                        <strong data-i18n="wiz-opt-1-2">Corporativo</strong>
-                        <span data-i18n="wiz-opt-1-2-desc">Lanzamientos de marca, ferias o stands.</span>
-                    </button>
-                    <button class="option-card" data-value="Festival / Estadio">
-                        <span class="opt-icon">🎪</span>
-                        <strong data-i18n="wiz-opt-1-3">Festival / Estadio</strong>
-                        <span data-i18n="wiz-opt-1-3-desc">Grandes audiencias y escenarios masivos.</span>
-                    </button>
-                    <button class="option-card" data-value="Permanente">
-                        <span class="opt-icon">🏛️</span>
-                        <strong data-i18n="wiz-opt-1-4">Permanente</strong>
-                        <span data-i18n="wiz-opt-1-4-desc">Instalaciones fijas en museos o locales.</span>
-                    </button>
-                </div>
-            </div>
+    // --- LÓGICA GALERÍA INTERACTIVA LÁSER ---
+    function setGaleriaLaserMain(type, url, el) {
+        const videoEl = document.getElementById('galeria-laser-main-video');
+        const imgEl = document.getElementById('galeria-laser-main-img');
+        
+        document.querySelectorAll('.galeria-laser-thumb-item').forEach(item => {
+            item.style.border = '1px solid rgba(255,255,255,0.15)';
+            item.style.opacity = '0.6';
+        });
+        if (el) {
+            el.style.border = '2px solid #ff0055';
+            el.style.opacity = '1';
+        }
 
-            <!-- STEP 2: Servicio -->
-            <div class="wizard-step" data-step="2">
-                <h3 data-i18n="wiz-step-2-title">TIPO DE SERVICIO</h3>
-                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-                    <button class="option-card" data-value="Instalación Interactiva">
-                        <span class="opt-icon">🕳️</span>
-                        <strong data-i18n="wiz-opt-2-1">Instalación Interactiva</strong>
-                        <span data-i18n="wiz-opt-2-1-desc">Piso, pared o estructura reactiva.</span>
-                    </button>
-                    <button class="option-card" data-value="Laser / Luz">
-                        <span class="opt-icon">✨</span>
-                        <strong data-i18n="wiz-opt-2-2">Diseño Lumínico / Laser</strong>
-                        <span data-i18n="wiz-opt-2-2-desc">Cortinas de luz, columnas, efectos.</span>
-                    </button>
-                    <button class="option-card" data-value="Touch / Tótem">
-                        <span class="opt-icon">🖱️</span>
-                        <strong data-i18n="wiz-opt-2-3">Pantalla Táctil / Tótem</strong>
-                        <span data-i18n="wiz-opt-2-3-desc">Interfaz digital interactiva.</span>
-                    </button>
-                    <button class="option-card" data-value="Gamificación">
-                        <span class="opt-icon">🎮</span>
-                        <strong data-i18n="wiz-opt-2-4">Juego / Gamificación</strong>
-                        <span data-i18n="wiz-opt-2-4-desc">Competencia, ranking, sorteos.</span>
-                    </button>
-                    <button class="option-card" data-value="Sincro Laser">
-                        <span class="opt-icon">🌟</span>
-                        <strong data-i18n="wiz-opt-2-5">Sincro Láser</strong>
-                        <span data-i18n="wiz-opt-2-5-desc">Show de video + láser sincronizado.</span>
-                    </button>
-                    <button class="option-card" data-value="Combo">
-                        <span class="opt-icon">📦</span>
-                        <strong data-i18n="wiz-opt-2-6">Combo / Multiservicios</strong>
-                        <span data-i18n="wiz-opt-2-6-desc">Dos o más servicios combinados.</span>
-                    </button>
-                </div>
-            </div>
+        if (type === 'video') {
+            imgEl.style.display = 'none';
+            videoEl.style.display = 'block';
+            videoEl.src = url;
+            videoEl.play();
+        } else {
+            videoEl.pause();
+            videoEl.style.display = 'none';
+            imgEl.style.display = 'block';
+            imgEl.src = url;
+        }
+    }
 
-            <!-- STEP 3: Presupuesto Estimado -->
-            <div class="wizard-step" data-step="3">
-                <h3 data-i18n="wiz-step-3b-title">PRESUPUESTO ESTIMADO (USD)</h3>
-                <div class="option-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-                    <button class="option-card" data-value="menos de 2000">
-                        <strong>Menos de 2.000</strong>
-                    </button>
-                    <button class="option-card" data-value="2 a 5000">
-                        <strong>2.000 a 5.000</strong>
-                    </button>
-                    <button class="option-card" data-value="5 a 10000">
-                        <strong>5.000 a 10.000</strong>
-                    </button>
-                    <button class="option-card" data-value="10k a 20k">
-                        <strong>10.000 a 20.000</strong>
-                    </button>
-                    <button class="option-card" data-value="20 a 30">
-                        <strong>20.000 a 30.000</strong>
-                    </button>
-                    <button class="option-card" data-value="mas de 30">
-                        <strong>Más de 30.000</strong>
-                    </button>
-                </div>
-            </div>
+    // --- CONFIGURACIÓN Y FORMULARIO DE INSCRIPCIÓN DINÁMICO ---
+    const WORKSHOPS_CONFIG = {
+        'td2': {
+            modalId: 'workshop-td2-modal',
+            title: 'Inscripción Workshop TouchDesigner v2',
+            name: 'Workshop TouchDesigner v2 (Laboratorio Inmersivo)',
+            presencialPrice: '$180.000',
+            virtualPrice: '$75.000',
+            hasVirtual: true,
+            paymentLinks: {
+                'presencial': 'https://mpago.li/2GBLeA8',
+                'virtual': 'https://mpago.li/1MsUNyb'
+            }
+        },
+        'laser': {
+            modalId: 'workshop-laser-modal',
+            title: 'Inscripción Workshop Fundamentos Láser para Shows',
+            name: 'Workshop Fundamentos Láser para Shows (06/10 y 07/10)',
+            presencialPrice: '$150.000',
+            virtualPrice: null,
+            hasVirtual: false,
+            paymentLinks: {
+                'presencial': 'https://mpago.li/2GBLeA8'
+            }
+        }
+    };
 
-            <!-- STEP 4: Detalles -->
-            <div class="wizard-step" data-step="4">
-                <h3 data-i18n="wiz-step-3-title">DETALLES DEL EVENTO</h3>
-                <div class="form-grid">
-                    <div class="form-field">
-                        <label data-i18n="f-date">Fecha estimada</label>
-                        <input type="date" id="budget-date" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
-                    </div>
-                    <div class="form-field">
-                        <label data-i18n="f-dur">Duración (días)</label>
-                        <select id="budget-duration" style="background: rgba(12,12,30,0.9); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
-                            <option value="1 día" data-i18n="opt-1d">1 día</option>
-                            <option value="2-3 días" data-i18n="opt-23d">2-3 días</option>
-                            <option value="1 semana" data-i18n="opt-1w">1 semana</option>
-                            <option value="Permanente" data-i18n="opt-perm">Permanente</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label data-i18n="f-loc">Ubicación</label>
-                        <input type="text" id="budget-location" placeholder="Ciudad o venue" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
-                    </div>
-                    <div class="form-field">
-                        <label data-i18n="f-aud">Audiencia estimada</label>
-                        <select id="budget-audience" style="background: rgba(12,12,30,0.9); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
-                            <option data-i18n="aud-1">Hasta 50 personas</option>
-                            <option data-i18n="aud-2">50-200 personas</option>
-                            <option data-i18n="aud-3">200-1000 personas</option>
-                            <option data-i18n="aud-4">+1000 personas</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+    let currentWsId = 'td2';
 
-            <!-- STEP 5: Contacto -->
-            <div class="wizard-step" data-step="5">
-                <h3 data-i18n="wiz-step-4-title">DATOS DE CONTACTO</h3>
-                <div class="form-grid">
-                    <div class="form-field">
-                        <label data-i18n="f-name">Nombre / Empresa</label>
-                        <input type="text" id="budget-name" placeholder="" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
-                    </div>
-                    <div class="form-field">
-                        <label data-i18n="f-email">Email</label>
-                        <input type="email" id="budget-email" placeholder="tu@email.com" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%;">
-                    </div>
-                    <div class="form-field full" style="grid-column: 1 / -1; margin-top: 1rem;">
-                        <label data-i18n="f-notes">Notas adicionales</label>
-                        <textarea id="budget-notes" rows="3" placeholder="" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; padding: 10px; width: 100%; resize: none;"></textarea>
-                    </div>
-                </div>
-            </div>
+    function abrirInscripcion(modalidad, wsId) {
+        currentWsId = wsId || 'td2';
+        const ws = WORKSHOPS_CONFIG[currentWsId];
 
-            <!-- Resumen final -->
-            <div class="wizard-step" data-step="6">
-                <h3 data-i18n="wiz-step-5-title">✔ SOLICITUD ENVIADA</h3>
-                <div id="budget-summary" style="margin-top: 1rem;"></div>
-            </div>
+        // Ocultar modales de detalle
+        document.getElementById('workshop-td2-modal').style.display = 'none';
+        document.getElementById('workshop-laser-modal').style.display = 'none';
 
-            <div class="wizard-nav" style="display: flex; gap: 1rem; margin-top: 2rem;">
-                <button class="wiz-btn wiz-back" id="wiz-back" style="display:none; flex: 1; padding: 1rem; background: transparent; border: 1px solid var(--border); color: white; cursor: pointer;" data-i18n="wiz-back">← ATRÁS</button>
-                <button class="wiz-btn wiz-next" id="wiz-next" style="flex: 1; padding: 1rem; background: var(--accent); border: none; color: black; cursor: pointer; font-weight: 700;" data-i18n="wiz-next">SIGUIENTE →</button>
-            </div>
-            <p class="budget-disclaimer" style="font-size: 0.7rem; color: var(--text-dim); margin-top: 1.5rem; text-align: center;" data-i18n="wiz-disclaimer">* El resultado es una estimación técnica basada en la complejidad de hardware y software.</p>
-        </div>
-    </section>
+        // Actualizar título del modal
+        const titleEl = document.getElementById('ins-modal-title');
+        if (titleEl) titleEl.innerText = ws.title;
+
+        // Ajustar visibilidad de opción virtual
+        const btnVirtual = document.getElementById('mod-opt-virtual');
+        if (ws.hasVirtual) {
+            btnVirtual.style.display = 'block';
+        } else {
+            btnVirtual.style.display = 'none';
+        }
+
+        document.getElementById('ws-inscripcion-modal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        setModalidadInscripcion(modalidad || 'presencial');
+    }
+
+    function setModalidadInscripcion(mod) {
+        const ws = WORKSHOPS_CONFIG[currentWsId];
+        document.getElementById('ins-modalidad').value = mod;
+        const btnPresencial = document.getElementById('mod-opt-presencial');
+        const btnVirtual = document.getElementById('mod-opt-virtual');
+        const linkPago = document.getElementById('ins-link-pago-directo');
+
+        // Actualizar montos en botones
+        if (btnPresencial.querySelector('span')) {
+            btnPresencial.querySelector('span').innerText = ws.presencialPrice;
+        }
+        if (ws.hasVirtual && btnVirtual.querySelector('span')) {
+            btnVirtual.querySelector('span').innerText = ws.virtualPrice;
+        }
+
+        if (mod === 'presencial' || !ws.hasVirtual) {
+            btnPresencial.style.border = '1px solid var(--accent)';
+            btnPresencial.style.background = 'rgba(0,229,255,0.12)';
+            btnPresencial.style.color = 'white';
+            if (btnPresencial.querySelector('span')) btnPresencial.querySelector('span').style.color = '#00e5ff';
+
+            if (ws.hasVirtual) {
+                btnVirtual.style.border = '1px solid rgba(255,255,255,0.15)';
+                btnVirtual.style.background = 'rgba(255,255,255,0.03)';
+                btnVirtual.style.color = '#aaa';
+                if (btnVirtual.querySelector('span')) btnVirtual.querySelector('span').style.color = '#aaa';
+            }
+
+            linkPago.innerText = `PAGAR PRESENCIAL AHORA (${ws.presencialPrice})`;
+            linkPago.href = ws.paymentLinks.presencial || '#';
+        } else {
+            btnVirtual.style.border = '1px solid var(--accent)';
+            btnVirtual.style.background = 'rgba(0,229,255,0.12)';
+            btnVirtual.style.color = 'white';
+            if (btnVirtual.querySelector('span')) btnVirtual.querySelector('span').style.color = '#00e5ff';
+
+            btnPresencial.style.border = '1px solid rgba(255,255,255,0.15)';
+            btnPresencial.style.background = 'rgba(255,255,255,0.03)';
+            btnPresencial.style.color = '#aaa';
+            if (btnPresencial.querySelector('span')) btnPresencial.querySelector('span').style.color = '#aaa';
+
+            linkPago.innerText = `PAGAR VIRTUAL AHORA (${ws.virtualPrice})`;
+            linkPago.href = ws.paymentLinks.virtual || '#';
+        }
+    }
+
+    function validarDatosInscripcion() {
+        const nombre = document.getElementById('ins-nombre').value.trim();
+        const email = document.getElementById('ins-email').value.trim();
+        const dni = document.getElementById('ins-dni').value.trim();
+        const tel = document.getElementById('ins-tel').value.trim();
+
+        if (!nombre || !email || !dni || !tel) {
+            alert('Por favor completá los campos obligatorios: Nombre, Email, DNI y Teléfono.');
+            return null;
+        }
+
+        const ws = WORKSHOPS_CONFIG[currentWsId];
+        const obs = document.getElementById('ins-obs').value.trim();
+        const mod = document.getElementById('ins-modalidad').value;
+        const precio = mod === 'presencial' ? ws.presencialPrice : ws.virtualPrice;
+        const modTexto = `${mod.toUpperCase()} (${precio})`;
+
+        return { nombre, email, dni, tel, obs, modTexto, wsName: ws.name };
+    }
+
+    function procesarInscripcionWhatsApp(e) {
+        if (e) e.preventDefault();
+        const datos = validarDatosInscripcion();
+        if (!datos) return;
+
+        let msg = `Hola! Quiero confirmar mi inscripción al ${datos.wsName}.\n\n` +
+                  `📌 *MIS DATOS DE INSCRIPCIÓN:*\n` +
+                  `• *Nombre:* ${datos.nombre}\n` +
+                  `• *Email:* ${datos.email}\n` +
+                  `• *DNI:* ${datos.dni}\n` +
+                  `• *Teléfono:* ${datos.tel}\n` +
+                  `• *Modalidad:* ${datos.modTexto}\n`;
+
+        if (datos.obs) {
+            msg += `• *Observaciones:* ${datos.obs}\n`;
+        }
+
+        msg += `\nAdjunto el comprobante de pago para validar mi cupo.`;
+
+        const waUrl = `https://api.whatsapp.com/send?phone=5491133903141&text=${encodeURIComponent(msg)}`;
+        window.open(waUrl, '_blank');
+    }
+
+    function procesarInscripcionEmail(e) {
+        if (e) e.preventDefault();
+        const datos = validarDatosInscripcion();
+        if (!datos) return;
+
+        const subject = `Inscripción ${datos.wsName} - ${datos.nombre}`;
+        let body = `Hola equipo de DIAGONAL XUR,\n\n` +
+                   `Dejo mis datos para confirmar la inscripción al ${datos.wsName}:\n\n` +
+                   `- Nombre completo: ${datos.nombre}\n` +
+                   `- Email: ${datos.email}\n` +
+                   `- DNI: ${datos.dni}\n` +
+                   `- Teléfono: ${datos.tel}\n` +
+                   `- Modalidad: ${datos.modTexto}\n`;
+
+        if (datos.obs) {
+            body += `- Observaciones: ${datos.obs}\n`;
+        }
+
+        body += `\nAdjunto el comprobante de pago a este email.\n\nSaludos!`;
+
+        const mailtoUrl = `mailto:hola.xur@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+    }
+    </script>
+
+
+
+
 
     <section id="contacto" class="reveal">
         <div class="section-header">
