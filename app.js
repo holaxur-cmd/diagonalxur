@@ -397,8 +397,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Cierra menu mobile si está abierto
                 const navLinks = document.getElementById('nav-links');
                 const hamburger = document.getElementById('hamburger');
+                const navbar = document.querySelector('.navbar');
                 if (navLinks) navLinks.classList.remove('open');
                 if (hamburger) hamburger.classList.remove('open');
+                if (navbar) navbar.classList.remove('menu-open');
             }
         });
     });
@@ -406,10 +408,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==================== HAMBURGER MENU ====================
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+    const navbar = document.querySelector('.navbar');
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('open');
             navLinks.classList.toggle('open');
+            if (navbar) navbar.classList.toggle('menu-open');
         });
     }
 
