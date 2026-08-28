@@ -114,11 +114,11 @@
             .capabilities-grid {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 2.2rem 2rem;
-                max-width: 1200px;
-                margin-top: 3.5rem;
+                gap: 3rem 2.8rem;
+                max-width: 1300px;
+                margin-top: 4rem;
                 justify-content: center;
-                padding-bottom: 2rem;
+                padding-bottom: 3rem;
             }
 
             .cap-card {
@@ -126,10 +126,10 @@
                 background: rgba(12, 12, 28, 0.5);
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 border-radius: 100px;
-                padding: 1.1rem 2.6rem;
+                padding: 1.3rem 3.2rem;
                 display: flex;
                 align-items: center;
-                gap: 1.6rem;
+                gap: 1.8rem;
                 overflow: hidden;
                 backdrop-filter: blur(12px);
                 transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
@@ -137,21 +137,21 @@
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             }
 
-            /* Scattered organic offsets */
+            /* Scattered organic offsets with more spacing */
             .cap-card:nth-child(1) {
-                transform: translateY(-10px) rotate(-0.8deg);
+                transform: translateX(-40px) translateY(-15px) rotate(-1deg);
             }
             .cap-card:nth-child(2) {
-                transform: translateY(22px) rotate(1.2deg);
+                transform: translateX(40px) translateY(25px) rotate(1.2deg);
             }
             .cap-card:nth-child(3) {
-                transform: translateY(-18px) rotate(-0.5deg);
+                transform: translateX(-60px) translateY(-25px) rotate(-0.5deg);
             }
             .cap-card:nth-child(4) {
-                transform: translateY(12px) rotate(0.8deg);
+                transform: translateX(60px) translateY(15px) rotate(0.8deg);
             }
             .cap-card:nth-child(5) {
-                transform: translateY(-8px) rotate(-1deg);
+                transform: translateY(35px) rotate(-1deg);
             }
 
             /* Scanner line sweep effect */
@@ -184,11 +184,11 @@
 
             .cap-num {
                 font-family: var(--font-mono);
-                font-size: 1.05rem;
+                font-size: 1.2rem;
                 font-weight: 700;
                 color: #00e5ff;
-                width: 44px;
-                height: 44px;
+                width: 52px;
+                height: 52px;
                 border-radius: 50%;
                 background: rgba(0, 229, 255, 0.08);
                 border: 1px solid rgba(0, 229, 255, 0.25);
@@ -210,7 +210,7 @@
             }
 
             .cap-text {
-                font-size: 1.05rem;
+                font-size: 1.2rem;
                 font-weight: 600;
                 color: #ffffff;
                 letter-spacing: 0.5px;
