@@ -249,8 +249,8 @@
         
         <style>
             .bento-workshops {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                flex-direction: column;
                 gap: 1.5rem;
                 margin-top: 2rem;
             }
@@ -258,17 +258,19 @@
                 position: relative;
                 overflow: hidden;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
                 width: 100%;
-                min-height: 490px;
-                border-radius: 12px;
+                min-height: 220px;
+                border-radius: 14px;
                 background: rgba(10, 10, 26, 0.75);
                 backdrop-filter: blur(10px);
+                padding: 1.8rem 2.2rem;
                 transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
             }
             .bento-card-item:hover {
-                transform: translateY(-4px);
+                transform: translateY(-3px);
             }
             .bento-prox-bg {
                 position: absolute;
@@ -279,30 +281,44 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                opacity: 0.45;
+                opacity: 0.42;
                 z-index: 0;
                 transition: opacity 0.4s ease, transform 0.5s ease;
             }
             .bento-card-item:hover .bento-prox-bg {
-                opacity: 0.65;
-                transform: scale(1.04);
+                opacity: 0.62;
+                transform: scale(1.02);
             }
             .bento-card-content {
                 position: relative;
                 z-index: 2;
-                padding: 1.6rem 1.6rem 0.5rem 1.6rem;
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1;
+                gap: 0.5rem;
+                max-width: 68%;
             }
             .bento-card-footer {
                 position: relative;
                 z-index: 2;
-                padding: 0 1.6rem 1.6rem 1.6rem;
-                margin-top: auto;
+                display: flex;
+                gap: 0.8rem;
+                align-items: center;
+                min-width: 320px;
             }
-            @media (max-width: 992px) {
-                .bento-workshops { grid-template-columns: repeat(1, 1fr); }
+            @media (max-width: 860px) {
+                .bento-card-item {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1.2rem;
+                    padding: 1.5rem;
+                }
+                .bento-card-content {
+                    max-width: 100%;
+                }
+                .bento-card-footer {
+                    width: 100%;
+                    min-width: unset;
+                }
             }
         </style>
         <div class="bento-workshops">
@@ -313,30 +329,26 @@
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg');"></div>
 
                 <div class="bento-card-content">
-                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.6); color: #00e5ff; background: rgba(0,229,255,0.12);">PRESENCIAL</span>
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.6); color: #a855f7; background: rgba(168,85,247,0.12);">VIRTUAL</span>
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.5); color: #ffc800; background: rgba(255,200,0,0.12);">V2 — NUEVA EDICIÓN</span>
                     </div>
-                    <h3 style="margin-bottom: 0.6rem; font-size: 1.25rem; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
-                    <div style="display: flex; gap: 0.4rem; flex-direction: column; margin-bottom: 0.9rem;">
-                        <span style="font-size: 0.74rem; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.5); color: #00e5ff; background: rgba(0,0,0,0.5); display: inline-block; width: fit-content;">Presencial: $180.000 (3 cuotas: $230.000)</span>
-                        <span style="font-size: 0.74rem; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(0,0,0,0.5); display: inline-block; width: fit-content;">Virtual: $75.000 (3 cuotas: $95.000)</span>
+                    <h3 style="margin-bottom: 0.3rem; font-size: 1.3rem; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">TOUCHDESIGNER — LABORATORIO INMERSIVO</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                        <span style="font-size: 0.74rem; padding: 0.2rem 0.65rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.5); color: #00e5ff; background: rgba(0,0,0,0.65);">Presencial: $180.000 (3 cuotas: $230.000)</span>
+                        <span style="font-size: 0.74rem; padding: 0.2rem 0.65rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(0,0,0,0.65);">Virtual: $75.000 (3 cuotas: $95.000)</span>
                     </div>
-                    <p style="margin-bottom: 0.8rem; font-size: 0.86rem; color: #ddd; text-shadow: 0 1px 4px rgba(0,0,0,0.9); line-height: 1.5;">
-                        <strong>Fechas:</strong> Lunes 22/09 · 29/09 · 06/10<br>
-                        <strong>Horario:</strong> 18:00 a 21:00 hs (3hs por jornada)<br>
-                        <strong>Lugar:</strong> DIAGONAL XUR / Online
+                    <p style="font-size: 0.88rem; color: #ddd; text-shadow: 0 1px 5px rgba(0,0,0,0.9); line-height: 1.5; margin: 0;">
+                        <strong>Fechas:</strong> Lunes 22/09 · 29/09 · 06/10 &nbsp;·&nbsp; <strong>Horario:</strong> 18:00 a 21:00 hs &nbsp;·&nbsp; <strong>Lugar:</strong> DIAGONAL XUR / Online
                     </p>
                 </div>
 
                 <div class="bento-card-footer">
-                    <div style="display: flex; gap: 0.5rem;">
-                        <button onclick="document.getElementById('workshop-td2-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.4); color: white;">VER DETALLES Y TEMARIO</button>
-                        <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="padding: 0.8rem 1.2rem; background: var(--accent); color: var(--bg); font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(0,229,255,0.4);">
-                            COMPRAR
-                        </button>
-                    </div>
+                    <button onclick="document.getElementById('workshop-td2-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.85rem 1.2rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.5); color: white;">VER DETALLES Y TEMARIO</button>
+                    <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="padding: 0.85rem 1.6rem; background: var(--accent); color: var(--bg); font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 0 18px rgba(0,229,255,0.4);">
+                        COMPRAR
+                    </button>
                 </div>
             </div>
 
@@ -346,29 +358,25 @@
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion laser/IMG-20260213-WA0054-min.jpeg');"></div>
 
                 <div class="bento-card-content">
-                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,0,85,0.6); color: #ff0055; background: rgba(255,0,85,0.12);">PRESENCIAL</span>
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.5); color: #ffc800; background: rgba(255,200,0,0.12);">NUEVO</span>
                     </div>
-                    <h3 style="margin-bottom: 0.6rem; font-size: 1.25rem; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">FUNDAMENTOS LÁSER<br>PARA SHOWS</h3>
-                    <div style="display: flex; gap: 0.4rem; flex-direction: column; margin-bottom: 0.9rem;">
-                        <span style="font-size: 0.74rem; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid rgba(255,0,85,0.5); color: #ff0055; background: rgba(0,0,0,0.5); display: inline-block; width: fit-content;">Presencial: $150.000</span>
-                        <span style="font-size: 0.74rem; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: #ccc; background: rgba(0,0,0,0.5); display: inline-block; width: fit-content;">Presencial: 10 cupos</span>
+                    <h3 style="margin-bottom: 0.3rem; font-size: 1.3rem; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">FUNDAMENTOS LÁSER PARA SHOWS</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                        <span style="font-size: 0.74rem; padding: 0.2rem 0.65rem; border-radius: 20px; border: 1px solid rgba(255,0,85,0.5); color: #ff0055; background: rgba(0,0,0,0.65);">Presencial: $150.000</span>
+                        <span style="font-size: 0.74rem; padding: 0.2rem 0.65rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: #ccc; background: rgba(0,0,0,0.65);">Presencial: 10 cupos</span>
                     </div>
-                    <p style="margin-bottom: 0.8rem; font-size: 0.86rem; color: #ddd; text-shadow: 0 1px 4px rgba(0,0,0,0.9); line-height: 1.5;">
-                        <strong>Fechas:</strong> 06/10 y 07/10 (2 jornadas)<br>
-                        <strong>Horario:</strong> 18:00 a 21:00 hs<br>
-                        <strong>Docente:</strong> José Cerineo
+                    <p style="font-size: 0.88rem; color: #ddd; text-shadow: 0 1px 5px rgba(0,0,0,0.9); line-height: 1.5; margin: 0;">
+                        <strong>Fechas:</strong> 06/10 y 07/10 (2 jornadas) &nbsp;·&nbsp; <strong>Horario:</strong> 18:00 a 21:00 hs &nbsp;·&nbsp; <strong>Docente:</strong> José Cerineo
                     </p>
                 </div>
 
                 <div class="bento-card-footer">
-                    <div style="display: flex; gap: 0.5rem;">
-                        <button onclick="document.getElementById('workshop-laser-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.4); color: white;">VER DETALLES Y TEMARIO</button>
-                        <button onclick="abrirInscripcion('presencial', 'laser');" class="cta-btn" style="padding: 0.8rem 1.2rem; background: #ff0055; color: white; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(255,0,85,0.4);">
-                            COMPRAR
-                        </button>
-                    </div>
+                    <button onclick="document.getElementById('workshop-laser-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.85rem 1.2rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.5); color: white;">VER DETALLES Y TEMARIO</button>
+                    <button onclick="abrirInscripcion('presencial', 'laser');" class="cta-btn" style="padding: 0.85rem 1.6rem; background: #ff0055; color: white; font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 0 18px rgba(255,0,85,0.4);">
+                        COMPRAR
+                    </button>
                 </div>
             </div>
 
@@ -378,31 +386,29 @@
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion stage design/stage_3.png');"></div>
 
                 <div class="bento-card-content">
-                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.6); color: #a855f7; background: rgba(168,85,247,0.12);">PRESENCIAL</span>
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.5); color: #ffc800; background: rgba(255,200,0,0.12);">NUEVO</span>
                     </div>
-                    <h3 style="margin-bottom: 0.6rem; font-size: 1.25rem; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">STAGE DESIGN<br>DISEÑO DE ESCENARIOS</h3>
-                    <div style="display: flex; gap: 0.4rem; flex-direction: column; margin-bottom: 0.9rem;">
-                        <span style="font-size: 0.74rem; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(0,0,0,0.5); display: inline-block; width: fit-content;">Presencial: $220.000</span>
-                        <span style="font-size: 0.74rem; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: #ccc; background: rgba(0,0,0,0.5); display: inline-block; width: fit-content;">Presencial: 10 cupos</span>
+                    <h3 style="margin-bottom: 0.3rem; font-size: 1.3rem; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">STAGE DESIGN — DISEÑO DE ESCENARIOS</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                        <span style="font-size: 0.74rem; padding: 0.2rem 0.65rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(0,0,0,0.65);">Presencial: $220.000</span>
+                        <span style="font-size: 0.74rem; padding: 0.2rem 0.65rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: #ccc; background: rgba(0,0,0,0.65);">Presencial: 10 cupos</span>
                     </div>
-                    <p style="margin-bottom: 0.8rem; font-size: 0.86rem; color: #ddd; text-shadow: 0 1px 4px rgba(0,0,0,0.9); line-height: 1.5;">
-                        <strong>Fechas:</strong> 08/10 · 15/10 · 22/10 · 29/10 (4 clases)<br>
-                        <strong>Horario:</strong> 18:00 a 20:00 hs<br>
-                        <strong>Docente:</strong> Camilo
+                    <p style="font-size: 0.88rem; color: #ddd; text-shadow: 0 1px 5px rgba(0,0,0,0.9); line-height: 1.5; margin: 0;">
+                        <strong>Fechas:</strong> 08/10 · 15/10 · 22/10 · 29/10 (4 clases) &nbsp;·&nbsp; <strong>Horario:</strong> 18:00 a 20:00 hs &nbsp;·&nbsp; <strong>Docente:</strong> Camilo
                     </p>
                 </div>
 
                 <div class="bento-card-footer">
-                    <div style="display: flex; gap: 0.5rem;">
-                        <button onclick="document.getElementById('workshop-stagedesign-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.4); color: white;">VER DETALLES Y TEMARIO</button>
-                        <button onclick="abrirInscripcion('presencial', 'stagedesign');" class="cta-btn" style="padding: 0.8rem 1.2rem; background: #a855f7; color: white; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(168,85,247,0.4);">
-                            COMPRAR
-                        </button>
-                    </div>
+                    <button onclick="document.getElementById('workshop-stagedesign-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.85rem 1.2rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.5); color: white;">VER DETALLES Y TEMARIO</button>
+                    <button onclick="abrirInscripcion('presencial', 'stagedesign');" class="cta-btn" style="padding: 0.85rem 1.6rem; background: #a855f7; color: white; font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 0 18px rgba(168,85,247,0.4);">
+                        COMPRAR
+                    </button>
                 </div>
             </div>
+
+        </div>
 
         </div>
     </section>
