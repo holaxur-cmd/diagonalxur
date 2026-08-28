@@ -250,54 +250,26 @@
         <style>
             .bento-workshops {
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-auto-rows: 1fr;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
                 margin-top: 2rem;
             }
-            .bento-long { grid-column: span 3; }
-            .bento-short { grid-column: span 2; }
-            
-            .bento-prox {
+            .bento-card-item {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
+                justify-content: space-between;
                 width: 100%;
-                height: 100%;
-                position: relative;
-                overflow: hidden;
-                border: 1px solid rgba(255,255,255,0.1);
+                min-height: 100%;
             }
-            
-            .bento-prox-bg {
-                position: absolute;
-                top: 0; left: 0; width: 100%; height: 100%;
-                background-size: cover;
-                background-position: center;
-                opacity: 0.15;
-                z-index: 0;
-            }
-
-            .bento-prox-content {
-                position: relative;
-                z-index: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            @media (max-width: 768px) {
-                .bento-long, .bento-short { grid-column: span 5; }
-                .bento-workshops { grid-auto-rows: auto; }
+            @media (max-width: 992px) {
+                .bento-workshops { grid-template-columns: repeat(1, 1fr); }
             }
         </style>
         <div class="bento-workshops">
 
-            <!-- Workshop 1 (Largo) — TD v2 -->
-            <div class="team-card bento-long" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(0,229,255,0.15);">
-                <div class="card-glow"></div>
+            <!-- Workshop 1 — TOUCHDESIGNER V2 -->
+            <div class="team-card bento-card-item" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(0,229,255,0.25);">
+                <div class="card-glow" style="background: radial-gradient(circle at center, rgba(0,229,255,0.15) 0%, transparent 70%);"></div>
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg'); opacity: 0.28;"></div>
 
                 <div style="position: relative; z-index: 1; padding: 1.5rem;">
@@ -307,16 +279,15 @@
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">V2 — NUEVA EDICIÓN</span>
                     </div>
                     <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">TOUCHDESIGNER<br>LABORATORIO INMERSIVO</h3>
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.4); color: #00e5ff;">Presencial: $180.000 (3 cuotas: $230.000)</span>
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.4); color: #a855f7;">Virtual: $75.000 (3 cuotas: $95.000)</span>
+                    <div style="display: flex; gap: 0.4rem; flex-direction: column; margin-bottom: 0.8rem;">
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.4); color: #00e5ff; display: inline-block; width: fit-content;">Presencial: $180.000 (3 cuotas: $230.000)</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.4); color: #a855f7; display: inline-block; width: fit-content;">Virtual: $75.000 (3 cuotas: $95.000)</span>
                     </div>
                     <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
                         <strong>Fechas:</strong> Lunes 22/09 · 29/09 · 06/10<br>
                         <strong>Horario:</strong> 18:00 a 21:00 hs (3hs por jornada)<br>
                         <strong>Lugar:</strong> DIAGONAL XUR / Online
                     </p>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">De la interfaz de nodos al control de luces reales: audioreactividad, mapping, DMX y Pixel LED desde TouchDesigner.</p>
                 </div>
 
                 <div style="position: relative; z-index: 1; padding: 0 1.5rem 1.5rem 1.5rem;">
@@ -329,8 +300,8 @@
                 </div>
             </div>
 
-            <!-- Workshop 2 (Corto/Bento) — FUNDAMENTOS LÁSER PARA SHOWS -->
-            <div class="team-card bento-short" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(255,0,85,0.25);">
+            <!-- Workshop 2 — FUNDAMENTOS LÁSER PARA SHOWS -->
+            <div class="team-card bento-card-item" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(255,0,85,0.25);">
                 <div class="card-glow" style="background: radial-gradient(circle at center, rgba(255,0,85,0.15) 0%, transparent 70%);"></div>
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion laser/IMG-20260213-WA0054-min.jpeg'); opacity: 0.35;"></div>
 
@@ -340,9 +311,9 @@
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">NUEVO</span>
                     </div>
                     <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">FUNDAMENTOS LÁSER<br>PARA SHOWS</h3>
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Presencial: 10 cupos</span>
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,0,85,0.4); color: #ff0055;">$150.000</span>
+                    <div style="display: flex; gap: 0.4rem; flex-direction: column; margin-bottom: 0.8rem;">
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,0,85,0.4); color: #ff0055; display: inline-block; width: fit-content;">Presencial: $150.000</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc; display: inline-block; width: fit-content;">Presencial: 10 cupos</span>
                     </div>
                     <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
                         <strong>Fechas:</strong> 06/10 y 07/10 (2 jornadas)<br>
@@ -361,8 +332,8 @@
                 </div>
             </div>
 
-            <!-- Workshop 3 (Corto/Bento) — STAGE DESIGN -->
-            <div class="team-card bento-short" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(168,85,247,0.3);">
+            <!-- Workshop 3 — STAGE DESIGN -->
+            <div class="team-card bento-card-item" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(168,85,247,0.3);">
                 <div class="card-glow" style="background: radial-gradient(circle at center, rgba(168,85,247,0.15) 0%, transparent 70%);"></div>
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion stage design/stage_3.png'); opacity: 0.35;"></div>
 
@@ -372,9 +343,9 @@
                         <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">NUEVO</span>
                     </div>
                     <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">STAGE DESIGN<br>DISEÑO DE ESCENARIOS</h3>
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Presencial: 10 cupos</span>
-                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.4); color: #a855f7;">$220.000</span>
+                    <div style="display: flex; gap: 0.4rem; flex-direction: column; margin-bottom: 0.8rem;">
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.4); color: #a855f7; display: inline-block; width: fit-content;">Presencial: $220.000</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc; display: inline-block; width: fit-content;">Presencial: 10 cupos</span>
                     </div>
                     <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
                         <strong>Fechas:</strong> 08/10 · 15/10 · 22/10 · 29/10 (4 clases)<br>
@@ -390,17 +361,6 @@
                             COMPRAR
                         </button>
                     </div>
-                </div>
-            </div>
-
-            <!-- Workshop 4 (Largo) — PRÓXIMAMENTE -->
-            <div class="team-card bento-long bento-prox">
-                <div class="card-glow"></div>
-                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg');"></div>
-                <div class="bento-prox-content">
-                    <span style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
-                    <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
-                    <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
                 </div>
             </div>
 
