@@ -106,25 +106,142 @@
             <span class="section-num">02.</span>
             <h2 data-i18n="what-title">Qué hacemos</h2>
         </div>
-        <p class="large-statement" data-i18n="what-statement">Diseñamos y desarrollamos experiencias inmersivas que integran arte, tecnología y luz, transformando la percepción del espacio y generando interacción significativa con el público.</p>
-        <div class="capabilities-list">
-            <div class="cap-item">
-                <h4 data-i18n="cap-1-title">Diseño de espacios y objetos interactivos</h4>
+        <p class="large-statement" style="max-width: 850px; font-size: 1.15rem; line-height: 1.6; color: #ddd; margin-bottom: 2.2rem;" data-i18n="what-statement">Diseñamos y desarrollamos experiencias inmersivas que integran arte, tecnología y luz, transformando la percepción del espacio y generando interacción significativa con el público.</p>
+
+        <style>
+            .capabilities-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 1.2rem;
+                max-width: 1100px;
+                margin-top: 1.5rem;
+            }
+
+            .cap-card {
+                position: relative;
+                background: rgba(12, 12, 28, 0.7);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                padding: 1.4rem 1.8rem;
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+                transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+                cursor: default;
+            }
+
+            /* Scanner line sweep effect */
+            .cap-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.18), transparent);
+                transition: left 0.7s ease;
+            }
+
+            .cap-card:hover::before {
+                left: 100%;
+            }
+
+            .cap-card:hover {
+                transform: translateY(-4px) scale(1.01);
+                border-color: rgba(0, 229, 255, 0.45);
+                box-shadow: 0 10px 30px rgba(0, 229, 255, 0.15), inset 0 0 15px rgba(0, 229, 255, 0.05);
+            }
+
+            .cap-card:nth-child(even):hover {
+                border-color: rgba(168, 85, 247, 0.45);
+                box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15), inset 0 0 15px rgba(168, 85, 247, 0.05);
+            }
+
+            .cap-num {
+                font-family: var(--font-mono);
+                font-size: 0.85rem;
+                font-weight: 700;
+                color: #00e5ff;
+                padding: 0.4rem 0.7rem;
+                border-radius: 6px;
+                background: rgba(0, 229, 255, 0.08);
+                border: 1px solid rgba(0, 229, 255, 0.25);
+                letter-spacing: 1px;
+                flex-shrink: 0;
+                transition: transform 0.3s ease, background 0.3s ease;
+            }
+
+            .cap-card:nth-child(even) .cap-num {
+                color: #a855f7;
+                background: rgba(168, 85, 247, 0.08);
+                border-color: rgba(168, 85, 247, 0.25);
+            }
+
+            .cap-card:hover .cap-num {
+                transform: scale(1.1);
+            }
+
+            .cap-text {
+                font-size: 0.92rem;
+                font-weight: 600;
+                color: #ffffff;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                line-height: 1.3;
+                z-index: 1;
+            }
+
+            .cap-icon-glow {
+                position: absolute;
+                right: -20px;
+                bottom: -20px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(0,229,255,0.15) 0%, transparent 70%);
+                opacity: 0;
+                transition: opacity 0.4s ease;
+                pointer-events: none;
+            }
+
+            .cap-card:hover .cap-icon-glow {
+                opacity: 1;
+            }
+
+            @media (max-width: 768px) {
+                .capabilities-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="capabilities-grid">
+            <div class="cap-card">
+                <span class="cap-num">01</span>
+                <span class="cap-text" data-i18n="cap-1-title">Diseño de espacios y objetos interactivos</span>
+                <div class="cap-icon-glow"></div>
             </div>
-            <div class="cap-item">
-                <h4 data-i18n="cap-2-title">Contenido visual y dirección de arte</h4>
+            <div class="cap-card">
+                <span class="cap-num">02</span>
+                <span class="cap-text" data-i18n="cap-2-title">Contenido visual y dirección de arte</span>
+                <div class="cap-icon-glow" style="background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, transparent 70%);"></div>
             </div>
-            <div class="cap-item">
-                <h4 data-i18n="cap-3-title">Tecnología de sensores propia</h4>
+            <div class="cap-card">
+                <span class="cap-num">03</span>
+                <span class="cap-text" data-i18n="cap-3-title">Tecnología de sensores propia</span>
+                <div class="cap-icon-glow"></div>
             </div>
-            <div class="cap-item">
-                <h4 data-i18n="cap-4-title">Software con licencias oficiales</h4>
+            <div class="cap-card">
+                <span class="cap-num">04</span>
+                <span class="cap-text" data-i18n="cap-5-title">Equipo interdisciplinario</span>
+                <div class="cap-icon-glow" style="background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, transparent 70%);"></div>
             </div>
-            <div class="cap-item">
-                <h4 data-i18n="cap-5-title">Equipo interdisciplinario</h4>
-            </div>
-            <div class="cap-item">
-                <h4 data-i18n="cap-6-title">Equipo técnico para eventos</h4>
+            <div class="cap-card">
+                <span class="cap-num">05</span>
+                <span class="cap-text" data-i18n="cap-6-title">Equipo técnico para eventos</span>
+                <div class="cap-icon-glow"></div>
             </div>
         </div>
     </section>
