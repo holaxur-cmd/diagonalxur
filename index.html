@@ -361,14 +361,35 @@
                 </div>
             </div>
 
-            <!-- Workshop 3 (Corto) — PRÓXIMAMENTE -->
-            <div class="team-card bento-short bento-prox">
-                <div class="card-glow"></div>
-                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DSC09641-min.jpg');"></div>
-                <div class="bento-prox-content">
-                    <span style="margin-bottom: 1rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">PRESENCIAL</span>
-                    <h3 style="margin-bottom: 0.5rem;">PRÓXIMAMENTE</h3>
-                    <p style="color: #aaa;">Nuevo workshop en desarrollo</p>
+            <!-- Workshop 3 (Corto/Bento) — STAGE DESIGN -->
+            <div class="team-card bento-short" style="position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; text-align: left; width: 100%; border: 1px solid rgba(168,85,247,0.3);">
+                <div class="card-glow" style="background: radial-gradient(circle at center, rgba(168,85,247,0.15) 0%, transparent 70%);"></div>
+                <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg'); opacity: 0.35;"></div>
+
+                <div style="position: relative; z-index: 1; padding: 1.5rem;">
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(168,85,247,0.08);">PRESENCIAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">NUEVO</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem; line-height: 1.2;">STAGE DESIGN<br>DISEÑO DE ESCENARIOS</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); color: #ccc;">Presencial: 10 cupos</span>
+                        <span style="font-size: 0.72rem; padding: 0.15rem 0.55rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.4); color: #a855f7;">$220.000</span>
+                    </div>
+                    <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #aaa;">
+                        <strong>Fechas:</strong> 08/10 · 15/10 · 22/10 · 29/10 (4 clases)<br>
+                        <strong>Horario:</strong> 18:00 a 20:00 hs<br>
+                        <strong>Docente:</strong> Camilo
+                    </p>
+                </div>
+
+                <div style="position: relative; z-index: 1; padding: 0 1.5rem 1.5rem 1.5rem;">
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.8rem;">
+                        <button onclick="document.getElementById('workshop-stagedesign-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.8rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: white;">VER DETALLES Y TEMARIO</button>
+                        <button onclick="abrirInscripcion('presencial', 'stagedesign');" class="cta-btn" style="padding: 0.8rem 1.2rem; background: #a855f7; color: white; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(168,85,247,0.4);">
+                            COMPRAR
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -814,6 +835,162 @@
         </div>
     </div>
 
+    <!-- Modal Workshop Stage Design -->
+    <div id="workshop-stagedesign-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.88); z-index: 99999; backdrop-filter: blur(12px); justify-content: center; align-items: center; padding: 1rem;">
+        <div style="background: rgba(10,10,28,0.97); border: 1px solid rgba(168,85,247,0.3); border-radius: 14px; max-width: 1100px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 2.5rem; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.7);">
+            <button onclick="document.getElementById('workshop-stagedesign-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
+
+            <!-- Grid 2 Columnas -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+                
+                <!-- Columna Izquierda: Info + Docente + Galería Stage Design + Mapa -->
+                <div>
+                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(168,85,247,0.08);">PRESENCIAL</span>
+                        <span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.72rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(255,200,0,0.4); color: #ffc800; background: rgba(255,200,0,0.07);">NUEVO WORKSHOP</span>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: white; font-weight: 800; line-height: 1.2;">STAGE DESIGN<br>DISEÑO DE ESCENARIOS</h3>
+                    <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                        <strong>Fechas:</strong> 08/10 · 15/10 · 22/10 · 29/10 (4 clases)<br>
+                        <strong>Horario:</strong> 18:00 a 20:00 hs (2hs por clase)<br>
+                        <strong>Lugar:</strong> DIAGONAL XUR<br>
+                        <strong>Cupos presenciales:</strong> 10
+                    </p>
+
+                    <!-- DESCRIPCIÓN Y DOCENTE -->
+                    <div style="font-size: 0.92rem; color: #ddd; line-height: 1.6; margin-bottom: 2rem;">
+                        <p style="margin-bottom: 1.2rem; color: #bbb;">
+                            Capacitación práctica orientada al desarrollo conceptual y técnico de escenarios para espectáculos en vivo. A lo largo de 4 jornadas intensivas en el laboratorio, trabajarás en la diagramación espacial, integración de estructuras, iluminación y pantallas, culminando con la entrega de un proyecto de Stage Design completo.
+                        </p>
+
+                        <!-- Docente: Camilo -->
+                        <div style="background: rgba(168,85,247,0.05); border-left: 3px solid #a855f7; padding: 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1.2rem;">
+                            <div style="font-weight: bold; color: #a855f7; margin-bottom: 0.3rem; font-size: 0.95rem;">
+                                CAMILO — <a href="https://www.instagram.com/cam.i.l.o/" target="_blank" style="color: #a855f7; text-decoration: underline;">@cam.i.l.o</a>
+                            </div>
+                            <p style="color: #ccc; font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                Diseñador y director creativo especializado en Stage Design, arquitectura espacial para shows, escenografía inmersiva e integración visual para conciertos y eventos multimedia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- GALERÍA INTERACTIVA STAGE DESIGN -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: white; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.8rem;">Galería de Referencia Stage Design</h4>
+                        
+                        <!-- VISOR PRINCIPAL GRANDE -->
+                        <div id="galeria-stagedesign-main-viewer" style="position: relative; width: 100%; height: 380px; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid rgba(168,85,247,0.3); box-shadow: 0 0 30px rgba(0,0,0,0.8); margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center;">
+                            <img id="galeria-stagedesign-main-img" src="/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg" alt="Stage Design" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- TIRA DE MINIATURAS HORIZONTAL -->
+                        <div id="galeria-stagedesign-thumb-track" style="display: flex; gap: 0.6rem; overflow-x: auto; padding: 0.4rem 0.2rem; scrollbar-width: thin; scrollbar-color: #a855f7 rgba(255,255,255,0.05); -webkit-overflow-scrolling: touch;">
+                            <div class="galeria-stagedesign-thumb-item" onclick="setGaleriaStageDesignMain('/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 2px solid #a855f7; opacity: 1; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DSC09718-min.jpg" alt="Stage 1" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-stagedesign-thumb-item" onclick="setGaleriaStageDesignMain('/assets/Material_workshop/workshop Touchdesigner/DSC09796-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DSC09796-min.jpg" alt="Stage 2" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-stagedesign-thumb-item" onclick="setGaleriaStageDesignMain('/assets/Material_workshop/workshop Touchdesigner/MELLINO-07063-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/MELLINO-07063-min.jpg" alt="Stage 3" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                            <div class="galeria-stagedesign-thumb-item" onclick="setGaleriaStageDesignMain('/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg', this);" style="flex: 0 0 95px; height: 62px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); opacity: 0.6; cursor: pointer; position: relative; transition: all 0.2s;">
+                                <img src="/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-17-min.jpg" alt="Stage 4" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAPA UBICACIÓN DEL ESTUDIO -->
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">
+                        Ubicación del Estudio
+                    </h4>
+                    <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 0.8rem;">
+                        Av. Presidente Julio A. Roca 672, CABA · Monserrat, Buenos Aires
+                    </p>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); position: relative;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.692429427387!2d-58.37894212347313!3d-34.61192805793096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad2bf23e99d%3A0xb35a720e1dd20b8!2sAv.%20Pres.%20Diagonal%20Sur%20Julio%20Argentino%20Roca%20672%2C%20C1067%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" width="100%" height="200" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+
+                <!-- Columna Derecha: Temario + Reserva -->
+                <div>
+                    <!-- TEMARIO DETALLADO STAGE DESIGN -->
+                    <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Temario Detallado
+                    </h4>
+
+                    <div style="font-size: 0.95rem; color: #ddd;">
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 1: Arquitectura Espacial & Concepto (08/10)</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>1.1. Análisis del Espacio:</strong> Geometría del escenario, visibilidad y experiencia inmersiva del público.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>1.2. Lectura de Riders Técnicos:</strong> Integración de pantallas LED, estructuras truss e iluminación.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 2: Diagramación 3D & Estructuras (15/10)</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>2.1. Herramientas de Dibujo 3D:</strong> Maquetado preliminar de escenarios y jerarquía visual.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>2.2. Distribución de Fixtures y Proyección:</strong> Mapeo de pantallas LED y ejes de luz en el espacio.</li>
+                        </ul>
+
+                        <h5 style="color: white; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 3: Flujo de Trabajo Multimedia & Renders (22/10)</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>3.1. Sincronización Escénica:</strong> Articulación entre contenido visual, luces y performance del artista.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>3.2. Simulación y Renders de Presentación:</strong> Generación de previas 3D y carpetas de presentación profesional.</li>
+                        </ul>
+
+                        <h5 style="color: #a855f7; font-size: 1.05rem; margin-bottom: 0.6rem;">Bloque 4: Proyecto Integrador Final & Entrega (29/10)</h5>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.4rem;"><strong>4.1. Desarrollo Individual:</strong> Elaboración de un diseño de escenario propio aplicando las herramientas del taller.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>4.2. Presentación Final:</strong> Exposición de proyectos en el laboratorio de DIAGONAL XUR con devolución en vivo.</li>
+                        </ul>
+                    </div>
+
+                    <!-- RECUADRO DE INSCRIPCIÓN & RESERVA STAGE DESIGN -->
+                    <div style="background: rgba(168,85,247,0.04); border: 1px solid rgba(168,85,247,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+                        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+                            Inscripción & Reserva de Lugar
+                        </h4>
+
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Opción Presencial -->
+                            <div style="background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.3); border-radius: 8px; padding: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                    <div>
+                                        <span style="font-weight: bold; color: #a855f7; font-size: 0.95rem;">MODALIDAD PRESENCIAL</span>
+                                        <span style="display: block; font-size: 0.75rem; color: #aaa;">10 cupos en el laboratorio</span>
+                                    </div>
+                                    <span style="font-size: 1.3rem; font-weight: 900; color: white;">$220.000</span>
+                                </div>
+                                <button onclick="abrirInscripcion('presencial', 'stagedesign');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: #a855f7; color: white; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(168,85,247,0.3);">
+                                    RESERVAR PRESENCIAL
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONSULTAS POR WHATSAPP / EMAIL -->
+                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <p style="font-size: 0.8rem; color: #888; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 1px;">¿Tenés consultas?</p>
+                        <div style="display: flex; gap: 0.6rem;">
+                            <a href="https://api.whatsapp.com/send?phone=5491133903141&text=Hola%21%20Tengo%20una%20consulta%20sobre%20el%20workshop%20STAGE%20DESIGN." target="_blank" class="cta-btn" style="flex: 1; text-align: center; padding: 0.75rem; font-size: 0.82rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                WhatsApp
+                            </a>
+                            <a href="mailto:hola.xur@gmail.com?subject=Consulta%20Workshop%20Stage%20Design" class="cta-btn" style="flex: 1; text-align: center; padding: 0.75rem; font-size: 0.82rem; background: transparent; border: 1px solid rgba(255,255,255,0.25); color: #ccc; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                Email
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <!-- MODAL FORMULARIO DE INSCRIPCIÓN -->
     <div id="ws-inscripcion-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); z-index: 100000; backdrop-filter: blur(14px); justify-content: center; align-items: center; padding: 1rem;">
         <div style="background: rgba(12,12,32,0.98); border: 1px solid rgba(0,229,255,0.3); border-radius: 14px; max-width: 540px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 2.2rem; position: relative; box-shadow: 0 0 50px rgba(0,229,255,0.15);">
@@ -991,6 +1168,21 @@
         }
     }
 
+    // --- LÓGICA GALERÍA INTERACTIVA STAGE DESIGN ---
+    function setGaleriaStageDesignMain(url, el) {
+        const imgEl = document.getElementById('galeria-stagedesign-main-img');
+        
+        document.querySelectorAll('.galeria-stagedesign-thumb-item').forEach(item => {
+            item.style.border = '1px solid rgba(255,255,255,0.15)';
+            item.style.opacity = '0.6';
+        });
+        if (el) {
+            el.style.border = '2px solid #a855f7';
+            el.style.opacity = '1';
+        }
+        if (imgEl) imgEl.src = url;
+    }
+
     // --- CONFIGURACIÓN Y FORMULARIO DE INSCRIPCIÓN DINÁMICO ---
     const BANK_DETAILS = {
         alias: 'carite.deja.dolarapp',
@@ -1026,6 +1218,18 @@
             mpLinks: {
                 'presencial': 'https://mpago.li/2GBLeA8'
             }
+        },
+        'stagedesign': {
+            modalId: 'workshop-stagedesign-modal',
+            title: 'Inscripción Workshop Stage Design',
+            name: 'Workshop Stage Design — Diseño de Escenarios (08/10 al 29/10)',
+            prices: {
+                'presencial': { transf: '$220.000', cuotas: '$220.000' }
+            },
+            hasVirtual: false,
+            mpLinks: {
+                'presencial': 'https://mpago.li/2GBLeA8'
+            }
         }
     };
 
@@ -1038,6 +1242,8 @@
         // Ocultar modales de detalle
         document.getElementById('workshop-td2-modal').style.display = 'none';
         document.getElementById('workshop-laser-modal').style.display = 'none';
+        const sdModal = document.getElementById('workshop-stagedesign-modal');
+        if (sdModal) sdModal.style.display = 'none';
 
         // Actualizar título del modal
         const titleEl = document.getElementById('ins-modal-title');
