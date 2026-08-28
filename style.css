@@ -185,7 +185,7 @@ body {
         rgba(168, 85, 247, 0.05) 80%, 
         transparent
     );
-    animation: energy-sweep 12s infinite linear;
+    animation: energy-sweep 6s infinite linear;
     pointer-events: none;
     z-index: -1;
 }
