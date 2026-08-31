@@ -82,23 +82,7 @@
                 <p class="section-intro" data-i18n="team-intro">Somos un colectivo de artistas, diseñadores, programadores, animadores y técnicos con varios años de experiencia en publicidad, eventos, shows internacionales, animación y diseño de objetos.</p>
             </div>
         </div>
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="card-glow"></div>
-                <h3>Facundo Marrazzo</h3>
-                <span class="role">effe.cinco</span>
-            </div>
-            <div class="team-card">
-                <div class="card-glow"></div>
-                <h3>Julieta Ver</h3>
-                <span class="role">Julie Vtt</span>
-            </div>
-            <div class="team-card">
-                <div class="card-glow"></div>
-                <h3>Manuel Benavidez</h3>
-                <span class="role">Manuu_raw</span>
-            </div>
-        </div>
+
     </section>
 
     <!-- 02. QUÉ HACEMOS -->
@@ -370,8 +354,8 @@
         
         <div class="catalog-controls">
             <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">TODOS</button>
-                <button class="filter-btn" data-filter="01">INSTALACIONES</button>
+                <button class="filter-btn" data-filter="all">TODOS</button>
+                <button class="filter-btn active" data-filter="01">INSTALACIONES</button>
                 <button class="filter-btn" data-filter="03">PANTALLAS</button>
                 <button class="filter-btn" data-filter="04">MAPPING</button>
                 <button class="filter-btn" data-filter="mundial">MUNDIAL</button>
@@ -478,8 +462,9 @@
                 .bento-card-item {
                     flex-direction: column;
                     align-items: flex-start;
-                    gap: 1.5rem;
-                    padding: 1.8rem;
+                    gap: 1.2rem;
+                    padding: 1.5rem;
+                    min-height: auto;
                 }
                 .bento-card-content {
                     max-width: 100%;
@@ -487,6 +472,10 @@
                 .bento-card-footer {
                     width: 100%;
                     min-width: unset;
+                    flex-direction: column;
+                }
+                .bento-card-footer button {
+                    width: 100%;
                 }
             }
         </style>
@@ -498,11 +487,6 @@
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/workshop Touchdesigner/DISTORXION_MUTEK_04102025_@mirulucena-32-min.jpg');"></div>
 
                 <div class="bento-card-content">
-                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.2rem;">
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.6); color: #00e5ff; background: rgba(0,229,255,0.12);">PRESENCIAL</span>
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.6); color: #a855f7; background: rgba(168,85,247,0.12);">VIRTUAL</span>
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.6); color: #00e5ff; background: rgba(0,229,255,0.12);">V2 — NUEVA EDICIÓN</span>
-                    </div>
                     <h3 style="margin-bottom: 0.2rem; font-size: 1.4rem; line-height: 1.2; color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.95); font-weight: 800;">TOUCHDESIGNER — LABORATORIO INMERSIVO</h3>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
                         <span style="font-size: 0.76rem; padding: 0.25rem 0.7rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.5); color: #00e5ff; background: rgba(0,0,0,0.7); font-weight: 600;">Presencial: $180.000 (3 cuotas: $230.000)</span>
@@ -527,10 +511,6 @@
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion laser/IMG-20260213-WA0054-min.jpeg');"></div>
 
                 <div class="bento-card-content">
-                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.2rem;">
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.6); color: #00e5ff; background: rgba(0,229,255,0.12);">PRESENCIAL</span>
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.6); color: #a855f7; background: rgba(168,85,247,0.12);">NUEVO</span>
-                    </div>
                     <h3 style="margin-bottom: 0.2rem; font-size: 1.4rem; line-height: 1.2; color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.95); font-weight: 800;">FUNDAMENTOS LÁSER PARA SHOWS</h3>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
                         <span style="font-size: 0.76rem; padding: 0.25rem 0.7rem; border-radius: 20px; border: 1px solid rgba(0,229,255,0.5); color: #00e5ff; background: rgba(0,0,0,0.7); font-weight: 600;">Presencial: $150.000</span>
@@ -555,10 +535,6 @@
                 <div class="bento-prox-bg" style="background-image: url('/assets/Material_workshop/seleccion stage design/stage_3.png');"></div>
 
                 <div class="bento-card-content">
-                    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.2rem;">
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(168,85,247,0.6); color: #a855f7; background: rgba(168,85,247,0.12);">PRESENCIAL</span>
-                        <span style="display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.74rem; font-weight: bold; letter-spacing: 1px; border: 1px solid rgba(0,229,255,0.6); color: #00e5ff; background: rgba(0,229,255,0.12);">NUEVO</span>
-                    </div>
                     <h3 style="margin-bottom: 0.2rem; font-size: 1.4rem; line-height: 1.2; color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.95); font-weight: 800;">STAGE DESIGN — DISEÑO DE ESCENARIOS</h3>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
                         <span style="font-size: 0.76rem; padding: 0.25rem 0.7rem; border-radius: 20px; border: 1px solid rgba(168,85,247,0.5); color: #a855f7; background: rgba(0,0,0,0.7); font-weight: 600;">Presencial: $220.000</span>
@@ -831,7 +807,7 @@
             <button onclick="document.getElementById('workshop-laser-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
 
             <!-- Grid 2 Columnas -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
                 
                 <!-- Columna Izquierda: Info + Docente + Galería Laser + Mapa -->
                 <div>
@@ -1016,7 +992,7 @@
             <button onclick="document.getElementById('workshop-stagedesign-modal').style.display='none'; document.body.style.overflow='auto';" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1; z-index: 10;">&times;</button>
 
             <!-- Grid 2 Columnas -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
                 
                 <!-- Columna Izquierda: Info + Docente + Galería Stage Design + Mapa -->
                 <div>

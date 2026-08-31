@@ -1128,6 +1128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    renderCatalog();
+    const initialFilter = document.querySelector('.filter-btn.active')?.dataset.filter || '01';
+    renderCatalog(initialFilter);
 
 })();

@@ -1898,10 +1898,18 @@ body:not(.mobile-preview) #mobile-frame { all: unset; display: contents; }
 }
 
 .catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
     margin-top: 4rem;
+    padding-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+.catalog-grid::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
 }
 
 .product-card {
@@ -1913,6 +1921,9 @@ body:not(.mobile-preview) #mobile-frame { all: unset; display: contents; }
     display: flex;
     flex-direction: column;
     position: relative;
+    flex: 0 0 85vw; /* 85% of viewport width so next card peeks */
+    max-width: 400px; /* Cap width on desktop */
+    scroll-snap-align: center;
 }
 
 .product-card::before {
@@ -2343,6 +2354,26 @@ body:not(.mobile-preview) #mobile-frame { all: unset; display: contents; }
     .catalog-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .services-bento {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    }
+    
+    .bento-large, .bento-wide {
+        grid-row: auto !important;
+        grid-column: auto !important;
+    }
+    
+    .bento-card {
+        min-height: 280px !important;
+    }
+    
+    .bento-card h3 {
+        font-size: 1.6rem !important;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 
     .navbar {

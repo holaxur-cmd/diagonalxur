@@ -194,7 +194,7 @@
             corto: 'Láser',
             nivel: 'INICIAL',
             tag: 'PRESENCIAL',
-            color: '#ff1a1a',
+            color: '#a855f7',
             duracion: '1 día · 6hs intensivas',
             fechas: 'Sábado 29/08',
             lugar: 'DIAGONAL XUR',
@@ -219,7 +219,7 @@
             corto: 'Stage Design',
             nivel: 'INICIAL',
             tag: 'PRESENCIAL',
-            color: '#a855f7',
+            color: '#00e5ff',
             duracion: '4 clases · 2hs por jornada (8hs)',
             fechas: '08/10 · 15/10 · 22/10 · 29/10 (18 a 20hs)',
             lugar: 'DIAGONAL XUR',
@@ -255,35 +255,26 @@
         grid.innerHTML = '';
 
         CURSOS.forEach((c) => {
-            const esHibrido = c.modalidades.length > 1;
-            const precioHtml = c.modalidades.map(m => `
-                <div class="ws-precio-linea">
-                    <span class="ws-precio-modalidad">${m.nombre}</span>
-                    <span class="ws-precio-valor">${formatPrecio(m.precio)}</span>
-                    ${m.nota ? `<span class="ws-precio-nota">${m.nota}</span>` : ''}
-                </div>
-            `).join('');
+            const esMulti = c.modalidades.length > 1;
+            const precioDesde = Math.min(...c.modalidades.map(m => m.precio));
 
             const card = document.createElement('article');
             card.className = 'ws-card';
             card.style.setProperty('--curso', c.color);
             card.innerHTML = `
-                <div class="ws-card-media" style="background-image: url('${c.img}');">
-                    <span class="ws-card-tag" style="border-color: ${c.color}; color: ${c.color};">${c.tag}</span>
-                    <span class="ws-card-nivel">${c.nivel}</span>
-                </div>
+                <div class="ws-card-media" style="background-image: url('${c.img}');"></div>
                 <div class="ws-card-body">
                     <h3 class="ws-card-titulo">${c.corto}</h3>
-                    <p class="ws-card-sub">${c.nombre}</p>
                     <p class="ws-card-desc">${c.desc}</p>
                     <ul class="ws-card-meta">
                         <li><strong>${c.fechas}</strong></li>
                         <li>${c.duracion}</li>
-                        <li>${c.lugar}</li>
-                        <li>${c.docente}</li>
                     </ul>
                     <div class="ws-card-footer">
-                        <div class="ws-precio">${precioHtml}</div>
+                        <div class="ws-precio">
+                            <span class="ws-precio-modalidad">${esMulti ? 'Desde' : 'Valor'}</span>
+                            <span class="ws-precio-valor">${formatPrecio(precioDesde)}</span>
+                        </div>
                         <div class="ws-card-acciones">
                             <button class="ws-btn-detalle" data-id="${c.id}">VER TEMARIO</button>
                             <button class="ws-btn-comprar" data-id="${c.id}">INSCRIBIRME</button>
@@ -652,27 +643,18 @@
             border-top: 1px solid var(--border);
             padding-top: 1.2rem;
         }
-        .ws-precio { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
-        .ws-precio-linea { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+        .ws-precio { margin-bottom: 1rem; display: flex; align-items: baseline; gap: 0.6rem; }
         .ws-precio-modalidad {
             font-family: var(--font-mono);
             font-size: 0.62rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--text-dim);
-            min-width: 5.2rem;
         }
         .ws-precio-valor {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 800;
             color: #fff;
-        }
-        .ws-precio-nota {
-            font-family: var(--font-mono);
-            font-size: 0.62rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--text-dim);
         }
         .ws-card-acciones { display: flex; gap: 0.6rem; }
         .ws-btn-detalle, .ws-btn-comprar {
@@ -759,7 +741,7 @@
             color: white; font-size: 2rem;
             cursor: pointer; line-height: 1; z-index: 10;
         }
-        #ws-detalle-contenido { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+        #ws-detalle-contenido { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: start; }
         .ws-detalle-cabecera { padding-right: 1rem; border-right: 1px solid rgba(255,255,255,0.1); }
         .ws-detalle-cabecera h3 {
             font-size: 1.6rem; color: #fff; font-weight: 800;
@@ -778,10 +760,19 @@
             gap: 0.5rem;
             margin-bottom: 1.2rem;
         }
-        .ws-detalle-precio { display: flex; justify-content: space-between; align-items: center; }
-        .ws-detalle-precio span { color: var(--text-dim); font-size: 0.82rem; }
-        .ws-detalle-precio strong { color: #fff; font-size: 1.25rem; }
-        .ws-detalle-cta { display: flex; flex-direction: column; gap: 0.6rem; }
+        .ws-detalle-precio { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        .ws-detalle-precio span { color: var(--text-dim); font-size: 0.82rem; line-height: 1.4; }
+        .ws-detalle-precio strong { color: #fff; font-size: 1.25rem; white-space: nowrap; }
+        .ws-detalle-cta {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: row;
+            gap: 0.6rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+        }
+        .ws-detalle-cta .ws-btn-comprar-grande { flex: 1; width: auto; }
+        .ws-detalle-cta .cta-btn { margin-top: 0; flex-shrink: 0; }
         .ws-temario h4 {
             color: #fff; font-size: 1.2rem; margin-bottom: 1.2rem;
             border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;
@@ -881,12 +872,25 @@
             .ws-grid { grid-template-columns: repeat(2, 1fr); }
             #ws-detalle-contenido { grid-template-columns: 1fr; }
             .ws-detalle-cabecera { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.5rem; padding-right: 0; }
+            .ws-detalle-cta { flex-direction: column; }
         }
         @media (max-width: 768px) {
-            #workshops { padding: 7rem 1.5rem; }
-            .ws-grid { grid-template-columns: 1fr; }
-            .ws-modal-box { padding: 1.5rem; }
-            .compra-box { padding: 1.5rem; }
+            #workshops { padding: 7rem 1.25rem; }
+            .ws-intro { font-size: 1.1rem; line-height: 1.6; }
+            .ws-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            .ws-card-media { height: 140px; }
+            .ws-card-body { padding: 1.2rem; }
+            .ws-card-titulo { font-size: 1.3rem; }
+            .ws-card-desc { font-size: 0.85rem; }
+            .ws-card-meta { font-size: 0.78rem; line-height: 1.8; }
+            .ws-precio-valor { font-size: 1.25rem; }
+            .ws-card-acciones { gap: 0.5rem; }
+            .ws-btn-detalle, .ws-btn-comprar { font-size: 0.7rem; padding: 0.8rem 0.5rem; letter-spacing: 0; }
+            .ws-modal-box { padding: 1.25rem; }
+            .ws-detalle-cabecera h3 { font-size: 1.3rem; }
+            .ws-temario-bloque ul { font-size: 0.82rem; }
+            .ws-temario-bloque h5 { font-size: 0.9rem; }
+            .compra-box { padding: 1.25rem; }
             .compra-valor { flex-direction: column; align-items: flex-start; }
             .compra-valor .cv-detalle { text-align: left; }
             .ws-nota { flex-direction: column; align-items: flex-start; }
