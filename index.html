@@ -499,7 +499,7 @@
 
                 <div class="bento-card-footer">
                     <button onclick="document.getElementById('workshop-td2-modal').style.display='flex'; document.body.style.overflow='hidden';" class="cta-btn" style="flex: 1; text-align: center; padding: 0.9rem 1.2rem; font-size: 0.85rem; cursor: pointer; border: 1px solid rgba(255,255,255,0.35); background: rgba(0,0,0,0.55); color: #ffffff; font-weight: 600;">VER DETALLES Y TEMARIO</button>
-                    <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="padding: 0.9rem 1.8rem; background: #00e5ff; color: #08081a; font-weight: 800; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 0 20px rgba(0,229,255,0.5);">
+                    <button onclick="abrirInscripcion('presencial', 'td2');" class="cta-btn" style="padding: 0.9rem 1.8rem; background: #00e5ff; color: #08081a; font-weight: 800; font-size: 0.85rem; border: none; cursor: pointer; box-shadow: 0 0 20px rgba(0,229,255,0.5);">
                         COMPRAR
                     </button>
                 </div>
@@ -756,7 +756,7 @@
                                         <span style="display: block; font-size: 0.78rem; color: #00e5ff; font-weight: bold;">3 cuotas de $76.666 ($230.000)</span>
                                     </div>
                                 </div>
-                                <button onclick="abrirInscripcion('presencial');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
+                                <button onclick="abrirInscripcion('presencial', 'td2');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
                                     RESERVAR PRESENCIAL
                                 </button>
                             </div>
@@ -773,7 +773,7 @@
                                         <span style="display: block; font-size: 0.78rem; color: #a855f7; font-weight: bold;">3 cuotas de $31.666 ($95.000)</span>
                                     </div>
                                 </div>
-                                <button onclick="abrirInscripcion('virtual');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
+                                <button onclick="abrirInscripcion('virtual', 'td2');" class="cta-btn" style="width: 100%; text-align: center; padding: 0.85rem; font-size: 0.85rem; font-weight: bold; background: var(--accent); color: var(--bg); border: none; cursor: pointer;">
                                     RESERVAR VIRTUAL
                                 </button>
                             </div>
@@ -1199,21 +1199,21 @@
                 <div id="box-datos-transferencia" style="background: rgba(0,229,255,0.05); border: 1px dashed rgba(0,229,255,0.3); border-radius: 8px; padding: 1rem; margin-top: 0.3rem;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
                         <span style="font-size: 0.8rem; font-weight: bold; color: #00e5ff; text-transform: uppercase; letter-spacing: 1px;">Datos para Transferir</span>
-                        <span style="font-size: 0.7rem; color: #888;">Banco Santander</span>
+                        <span id="transf-banco-nombre" style="font-size: 0.7rem; color: #888;">Proveedor de Servicios de Pago - Garpa S.A (DolarApp)</span>
                     </div>
 
                     <div style="font-size: 0.82rem; color: #ddd; display: flex; flex-direction: column; gap: 0.45rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span><strong>Titular:</strong> CAMILO JOAQU PARISI</span>
-                            <span style="font-size: 0.75rem; color: #888;">CAJA DE AHORRO EN PESOS 156-019658/5</span>
+                            <span><strong>Titular:</strong> <span id="transf-titular-nombre">Facundo Marrazzo</span></span>
+                            <span id="transf-dni-cuenta" style="font-size: 0.75rem; color: #888;">DNI: 38128340</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); padding: 0.4rem 0.6rem; border-radius: 4px;">
-                            <span><strong>Alias:</strong> <code style="color: #00e5ff;">CamiloParisi</code></span>
-                            <button type="button" onclick="copiarTexto('CamiloParisi', this);" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; cursor: pointer;">Copiar</button>
+                            <span><strong>Alias:</strong> <code id="transf-alias-code" style="color: #00e5ff;">carite.deja.dolarapp</code></span>
+                            <button id="transf-alias-btn" type="button" onclick="copiarTexto(document.getElementById('transf-alias-code').innerText, this);" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; cursor: pointer;">Copiar</button>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); padding: 0.4rem 0.6rem; border-radius: 4px;">
-                            <span><strong>CBU:</strong> <code style="color: #00e5ff;">0720156788000001965854</code></span>
-                            <button type="button" onclick="copiarTexto('0720156788000001965854', this);" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; cursor: pointer;">Copiar</button>
+                            <span><strong id="transf-cvu-label">CVU:</strong> <code id="transf-cvu-code" style="color: #00e5ff;">0000069709015527845484</code></span>
+                            <button id="transf-cvu-btn" type="button" onclick="copiarTexto(document.getElementById('transf-cvu-code').innerText, this);" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.7rem; cursor: pointer;">Copiar</button>
                         </div>
                     </div>
 
@@ -1367,19 +1367,31 @@
     }
 
     // --- CONFIGURACIÓN Y FORMULARIO DE INSCRIPCIÓN DINÁMICO ---
-    const BANK_DETAILS = {
-        alias: 'carite.deja.dolarapp',
-        titular: 'Facundo Marrazzo',
-        cvu: '0000069709015527845484',
-        dni: '38128340',
-        banco: 'DolarApp (Garpa S.A.)'
+    const BANK_DETAILS_PROFILES = {
+        'facundo': {
+            banco: 'Proveedor de Servicios de Pago - Garpa S.A (DolarApp)',
+            titular: 'Facundo Marrazzo',
+            dni: 'DNI: 38128340',
+            alias: 'carite.deja.dolarapp',
+            cvuLabel: 'CVU:',
+            cvu: '0000069709015527845484'
+        },
+        'camilo': {
+            banco: 'Banco Santander',
+            titular: 'CAMILO JOAQU PARISI',
+            dni: 'CAJA DE AHORRO EN PESOS 156-019658/5',
+            alias: 'CamiloParisi',
+            cvuLabel: 'CBU:',
+            cvu: '0720156788000001965854'
+        }
     };
 
     const WORKSHOPS_CONFIG = {
         'td2': {
             modalId: 'workshop-td2-modal',
             title: 'Inscripción Workshop TouchDesigner v2',
-            name: 'Workshop TouchDesigner v2 (Laboratorio Inmersivo)',
+            name: 'Workshop TouchDesigner v2',
+            bankProfile: 'facundo',
             prices: {
                 'presencial': { transf: '$180.000', cuotas: '$230.000' },
                 'virtual': { transf: '$75.000', cuotas: '$95.000' }
@@ -1394,6 +1406,7 @@
             modalId: 'workshop-laser-modal',
             title: 'Inscripción Workshop Fundamentos Láser para Shows',
             name: 'Workshop Fundamentos Láser para Shows (06/10 y 07/10)',
+            bankProfile: 'facundo',
             prices: {
                 'presencial': { transf: '$150.000', cuotas: '$150.000' }
             },
@@ -1406,6 +1419,7 @@
             modalId: 'workshop-stagedesign-modal',
             title: 'Inscripción Workshop Stage Design',
             name: 'Workshop Stage Design — Diseño de Dispositivo Escénico (20/10 al 10/11)',
+            bankProfile: 'camilo',
             prices: {
                 'presencial': { transf: '$220.000', cuotas: '$220.000' }
             },
@@ -1431,6 +1445,24 @@
         // Actualizar título del modal
         const titleEl = document.getElementById('ins-modal-title');
         if (titleEl) titleEl.innerText = ws.title;
+
+        // Actualizar datos bancarios dinámicamente según el workshop
+        const bank = BANK_DETAILS_PROFILES[ws.bankProfile || 'facundo'];
+        if (bank) {
+            const bancoEl = document.getElementById('transf-banco-nombre');
+            const titularEl = document.getElementById('transf-titular-nombre');
+            const dniEl = document.getElementById('transf-dni-cuenta');
+            const aliasEl = document.getElementById('transf-alias-code');
+            const cvuLabelEl = document.getElementById('transf-cvu-label');
+            const cvuCodeEl = document.getElementById('transf-cvu-code');
+
+            if (bancoEl) bancoEl.innerText = bank.banco;
+            if (titularEl) titularEl.innerText = bank.titular;
+            if (dniEl) dniEl.innerText = bank.dni;
+            if (aliasEl) aliasEl.innerText = bank.alias;
+            if (cvuLabelEl) cvuLabelEl.innerText = bank.cvuLabel;
+            if (cvuCodeEl) cvuCodeEl.innerText = bank.cvu;
+        }
 
         // Ajustar visibilidad de opción virtual
         const btnVirtual = document.getElementById('mod-opt-virtual');
