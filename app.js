@@ -649,8 +649,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'LIVE SHOWS & LÁSER',
             items: [
                 'assets/video/sevicios/wow momet sincro laser AV/07_SL_03-min.mp4',
-                'assets/video/sevicios/wow momet sincro laser AV/07_SL_04-min.mp4',
-                'assets/video/sevicios/wow momet sincro laser AV/Copy of Faena completo-min.mp4'
+                'assets/video/sevicios/wow momet sincro laser AV/07_SL_04-min.mp4'
             ]
         },
         'mapping': {
