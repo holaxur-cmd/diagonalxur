@@ -1066,7 +1066,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const labelDisplay = isConsultar ? '+5 días' : (catalogDays === 1 ? 'Desde' : catalogDays + ' días');
 
             const wppMessage = `Hola! Quiero pedir la experiencia: ${item.title} (${isConsultar ? '+5 días' : catalogDays + ' día/s'})`;
-            const wppUrl = `https://wa.me/5491133903141?text=${encodeURIComponent(wppMessage)}`;
+            const wppUrl = `https://wa.me/5491161668051?text=${encodeURIComponent(wppMessage)}`;
 
             card.innerHTML = `
                 ${mediaHtml}

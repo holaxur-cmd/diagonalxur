@@ -112,4 +112,4 @@ Participante
 
 ## Contacto del estudio
 - Email: `hola.xur@gmail.com`
-- WhatsApp: `+54 9 11 3390 3141`
+- WhatsApp: `+54 9 11 6166 8051`
