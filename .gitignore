@@ -1,0 +1,5 @@
+# Archivos pesados no utilizados en la web
+assets/Material_workshop/workshop efeceele/VIDEO.mp4
+node_modules/
+.DS_Store
+Thumbs.db

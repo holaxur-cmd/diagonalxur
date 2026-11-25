@@ -2019,10 +2019,7 @@ body:not(.mobile-preview) #mobile-frame { all: unset; display: contents; }
 }
 
 .product-price-row {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none !important;
 }
 
 .price-label {
